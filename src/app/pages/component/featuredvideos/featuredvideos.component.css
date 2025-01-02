@@ -1,0 +1,14 @@
+.btn-close{
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    color: black !important;
+}
+.fa-solid{
+    font-size: 20px;
+    padding: 10px 13px;
+}
+.head{
+    font-size: 32px;
+}

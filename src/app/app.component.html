@@ -1,0 +1,8 @@
+<div class="main">
+    <app-topbar *ngIf="shouldtopbar()"></app-topbar>
+    <app-navbar *ngIf="shouldnavbar()"></app-navbar>
+<router-outlet></router-outlet>
+<app-app-download *ngIf="shouldappdownload()"></app-app-download>
+<app-newsletter *ngIf="shouldShowNewsletter()"></app-newsletter>
+<app-footer  *ngIf="shouldfooter()"></app-footer>
+</div>

@@ -1,0 +1,102 @@
+<div class="container-fluid px-5 py-5">
+    <div class="bg-white pt-5 pb-2 px-3">
+<div class="d-flex gap-3 align-items-center">
+    <img src="images/profile.png" alt="" height="100" width="100">
+    <div>
+        <p class="poppins-medium name">Inayat Mirza <span class="ms-3 vari text-muted"><img src="images/shield-security.png" alt="">Unvarified</span></p>
+        <p class="poppins-medium info text-muted">Member Since Nov 12, 2024</p>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-6 d-flex gap-2 ">
+<div>
+    <p class="text-muted poppins-regular "><span class="material-icons custom-icon" style="font-size: 20px;">location_on</span>
+
+        Near Charade , Ring Road Peshawar</p>
+    <p class="text-muted poppins-regular ">
+        <span class="material-icons custom-icon" style="font-size: 20px;">timer</span>
+        
+        10:00 pm to 07:00 pm</p>
+</div>
+<button class="showroom poppins-medium mt-3"> <img src="images/tagicon.png" alt=""> Showrooms</button>
+    </div>
+    <div class="col-6 text-end">
+        <button class="btn1 poppins-medium"><i class="fa fa-comment-dots pe-1"></i>
+            Chat</button>
+        <button class="btn1 poppins-medium"><img src="images/whatsapp.png" class="pe-1" alt="">Whatsapp</button>
+        <button class="btn1 poppins-medium"><i class="fa fa-phone pe-1"></i>
+            Call</button>
+    </div>
+</div>
+<hr style="border: 1px solid grey;">
+    </div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs pb-2 bg-white px-3" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link  poppins-medium active" id="post-ads-tab" data-bs-toggle="tab" href="#post-ads" role="tab" aria-controls="post-ads" aria-selected="true"><i class="fa-solid fa-bullhorn pe-3"></i>Post Ads</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link poppins-medium " id="shops-tab" data-bs-toggle="tab" href="#shops" role="tab" aria-controls="shops" aria-selected="false"><i class="fa-solid fa-shop pe-3"></i>Shops</a>
+          </li>
+        </ul>
+      <p class="mt-4 poppins-medium head px-3">Post Ads</p>
+        <!-- Tab content -->
+        <div class="tab-content px-3" id="myTabContent">
+          <!-- Post Ads Tab -->
+          <div class="tab-pane fade show active" id="post-ads" role="tabpanel" aria-labelledby="post-ads-tab">
+            <div class="row mt-3">
+              <div class="col-md-10" *ngFor="let ad of postAds">
+                <div class="card mb-3">
+                    <div class="row p-2">
+                        <div class="col-md-4">
+                  <img [src]="ad.image" class="img-fluid" style="border-radius: 15px;" alt="{{ ad.name }}">
+
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title poppins-medium">{{ ad.name }}</h5>
+                            <p class="card-title poppins-medium" style="color: #016635;">{{ ad.price }}</p>
+                            <ul class=" mb-2 d-flex gap-4">
+                                <li *ngFor="let detail of ad.details" class="card-text poppins-medium">{{ detail }}</li>
+                              </ul>
+                            <p class="card-text poppins-medium"><i class="fa-solid fa-location-dot me-2"></i>{{ ad.location }}</p>
+                            <p class="card-text poppins-regular">{{ ad.lastupdate }}</p>
+
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <button class="poppins-medium viewbtn ">View Ads<i class=" ms-2 fa-solid fa-arrow-right"></i></button>
+                            <button class="poppins-medium contactbtn "><i class="fa-solid fa-phone-volume me-3"></i>Contact Us</button>
+
+                        </div>
+                    </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          <!-- Shops Tab -->
+          <div class="tab-pane fade" id="shops" role="tabpanel" aria-labelledby="shops-tab">
+            <div class="row mt-3">
+              <div class="col-md-10" *ngFor="let ad of factory">
+                <div class="card mb-3">
+                    <div class="row p-2">
+                        <div class="col-md-4">
+                  <img [src]="ad.imageUrl" class="img-fluid" style="border-radius: 15px;" alt="{{ ad.title }}">
+
+                        </div>
+                        <div class="col-md-6 pt-3">
+                            <h5 class="card-title poppins-medium">{{ ad.title }}</h5>
+                            <p class="card-text"><i class="fa-solid fa-location-dot"></i>{{ ad.location }}</p>
+                            
+
+                        </div>
+          
+                    </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      

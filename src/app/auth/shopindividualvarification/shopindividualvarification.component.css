@@ -1,0 +1,153 @@
+.main{
+    background-color: #016635;
+}
+select{
+    border: 0px ;
+}
+img{
+    height: 300px;
+}
+.head{
+    font-size: 40px;
+}
+.formcol{
+    background-color: white;
+    border-radius: 30px 0px 0px 30px;
+    padding: 20px 30px;
+}
+input{
+    border: 0px;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+    box-shadow: 0px !important;
+    margin-top:25px ;
+}
+.form-control:focus{
+    box-shadow: none !important;
+    border-bottom: 1px solid black;
+}
+.radio{
+    border: 1px solid grey;
+    margin-top: 6px;
+    font-size: 20px;
+}
+.form-check-label{
+    font-size: 20px;
+
+}
+.headform{
+    font-size: 32px;
+}
+::placeholder{
+    font-size: 24px;
+    font-size: bold;
+}
+.roleclr{
+    color: #016635;
+    font-size: 24px;
+}
+.btn{
+    background-color: #016635;
+    color: white; font-size: 26px;
+}
+.d-flex{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.form-check-input:checked{
+    background-color: #016635;
+}
+.txt1{
+    font-size: 24px !important;
+}
+.endbtn{
+    background-color: white;
+    font-size: 16px;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.txt2{
+    font-size: 22px;
+}
+.btn1{
+height: 50px;
+min-width: 120px;
+color: #016635;
+    border-radius: 7px;
+    background-color: #0166355b;
+}
+.btn2{
+height: 50px;
+min-width: 120px;
+color: white;
+    border-radius: 7px;
+    background-color: #016635;
+}
+.uploadpic {
+    height: 236px !important;
+    border: 1px dashed green !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    border-radius: 7px;
+
+}
+
+  .file-upload-wrapper input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+   
+  }
+.fa-upload{
+    font-size: 30px;
+    color: #016635;
+}
+.upload{
+    font-size: 24px;
+    color: #016635;
+    margin-top: 10px;
+}
+.text-muted{
+    font-size: 20px;
+}
+.txt1{
+    font-size: 24px;
+    color: #016635;
+}
+.head{
+    font-size: 32px;
+}
+.txt{
+    font-size: 24px;
+}
+.form-group .inputhight{
+  height: 50px !important;
+}
+.txt2{
+    font-size: 24px;
+    color: rgba(59, 59, 59, 0.678);
+}
+.skipbutton{
+    background-color: #016635;
+    height: fit-content;
+    padding: 7px 30px;
+    color: white;
+    border: 0px;
+    font-size: 26px;
+    border-radius: 10px;
+}
+.varhead{
+    font-size: 32px;
+}
+.vartxt{
+    font-size: 20px;
+}

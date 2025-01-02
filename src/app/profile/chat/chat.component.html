@@ -1,0 +1,68 @@
+<div class="container p-0 py-5">
+  <div class="row bg-white p-0 w-100">
+    <div class="col-12">
+      <div class="full-width">
+        <app-profile></app-profile>
+      </div>
+      <div class="full-width">
+        <app-menubar></app-menubar>
+      </div>
+    </div>
+  </div>
+  <p class="head poppins-medium my-3">Received Messages</p>
+  <div class="row p-0 main">
+    <div class="col-md-4 p-0 bg-white column equal-section">
+      <p class="header py-3 poppins-medium ps-3">From</p>
+      <p class="txt poppins-medium w-100 pt-0 ps-3">Name</p>
+    </div>
+    <div class="col-md-4 p-0 bg-white column equal-section">
+      <p class="header py-3 poppins-medium ps-3">Add</p>
+      <p class="txt poppins-medium w-100 pt-0 ps-3" style="color: #016635;">Suzuki Alto VXR</p>
+    </div>
+    <div class="col-md-4 p-0 bg-white equal-section">
+      <p class="header py-3 poppins-medium ps-3">Date</p>
+      <p class="txt poppins-medium w-100 pt-0 ps-3">Nov 14 2024 08:20AM</p>
+    </div>
+  </div>
+
+  <div class="row p-0 bg-white mt-3 px-3">
+    <div class="col-4 profile py-4 d-flex gap-3">
+      <div><img src="images/profile.png" alt="Profile"></div>
+      <div>
+        <p class="poppins-medium profhead">Abdul Qadir</p>
+        <p class="poppins-medium proftxt">
+          Suzuki Alto <span style="color: #FA610E;">View Ad
+          <i class="fa-solid ms-2 fa-greater-than"></i>
+        </span>
+        </p>
+        <p class="poppins-regular profdate">Nov 14, 2024</p>
+      </div>
+    </div>
+    <div class="col-8"></div>
+  </div>
+
+  <div class="row bg-white mt-1 px-4">
+    <div class="col-12">
+      <div class="chat-container mb-4">
+        <div class="mb-3" id="chat-box">
+          <div *ngFor="let msg of messages" [ngClass]="msg.type" class="message">
+            <span class="user">{{ msg.user }}</span>
+            <span class="text">{{ msg.text }}</span>
+            <span *ngIf="msg.type === 'sent'" class="status">
+              <i *ngIf="msg.status === 'sent'" class="fa fa-check"></i>
+              <i *ngIf="msg.status === 'delivered'" class="fa fa-check-double"></i>
+              <i *ngIf="msg.status === 'read'" class="fa fa-check-double text-primary"></i>
+            </span>
+          </div>
+        </div>
+        <div class="text-end">
+          <button class="btn calbtn my-3 poppins-medium"><i class="fa-solid fa-phone me-3"></i>Call</button>
+        </div>
+        <form (submit)="sendMessage()" class="d-flex">
+          <input [(ngModel)]="newMessage" name="message" class="form-control me-2" placeholder="Enter Your Message" required />
+          <button type="submit" class="btn poppins-medium subbtn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

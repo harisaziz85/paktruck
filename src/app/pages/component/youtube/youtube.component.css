@@ -1,0 +1,48 @@
+
+  
+  .list-group-item {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+   
+  }
+  
+  .list-group-item.active {
+    background-color: #016635;
+    color: white;
+  }
+  
+  .img-thumbnail {
+    border-radius: 5px;
+    width: 100px;
+  }
+ 
+  .title{
+    font-size: 20px;
+  }
+  .title1{
+    font-size: 14px;
+  }
+  .colmd4 {
+    max-height: 370px;
+    overflow-y: auto; 
+    overflow-x: auto; 
+  }
+  
+  .colmd4::-webkit-scrollbar {
+    height: 5px;
+    width: 5px; 
+  }
+  
+  .colmd4::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  .colmd4::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  .colmd4::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  

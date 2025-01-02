@@ -1,0 +1,49 @@
+.main{
+    background-color: #F5F5F5;
+}
+.card-img-top{
+    height: fit-content;
+}
+button{
+    border: 0px ;
+    padding: 10px 20px;
+     border-radius: 7px;
+}
+.bottombtn{
+    position: absolute;
+    background-color: #FA610E;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+}
+.heart{
+    position: absolute;
+    bottom: 18px;
+    right: 150px;
+    z-index: 1000;
+}
+.card-title{
+    font-size: 20px;
+}
+.card-text{
+    font-size: 20px;
+    color: #016635;
+}
+.d-flex{
+    font-size: 16px;
+}
+.sixclass{
+    font-size: 16px;
+}
+.viewbtn{
+    background-color: #01663534;
+}
+.spn1{
+
+    color: #016635;
+}
+.spn2{
+   
+        color: #FF0000;
+    
+}

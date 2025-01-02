@@ -1,0 +1,126 @@
+<footer class="bgclr text-white py-4 px-5">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Category Make Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of categorymake">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cities Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of Cities">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Explore PakTrucks Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of ExplorePakTrucks">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PakTrucks Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of PakTrucks">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: white;">
+
+        <div class="row">
+            <!-- Trucks by Categories Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of TrucksbyCateogries">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trucks by Body Type Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of TrucksbyBodytype">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trucks by Color Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of TrucksbyColor">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trucks by Province Section -->
+            <div class="col-md-3">
+                <div *ngFor="let link of TrucksbyProvince">
+                    <h5 class="head poppins-medium">{{ link.title }}</h5>
+                    <ul>
+                        <li class="list-item poppins-medium">
+                            <a [href]="link.url" class="text-white text-decoration-none">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="color: white;">
+        <div class="row">
+            <div class="col-md-5">
+                <p class="head1 poppins-medium">Get The PakTruck App</p>
+                <p class="txt1 poppins-regular">Buy & Sell Truck, Machinery and Auto Parts and Better using our App</p>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex gap-3"><img class="img1" src="images/play1.png" alt="">
+                    <img class="img1" src="images/app1.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <img src="images/truck.png" class="imgfooter" alt="">
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="poppins-regular txt2"> Copyright © 2003 - 2024 PakTruck (Pvt) Ltd. - All Rights Reserved.
+                <span class="ps-5">Terms of Service |  Privacy Policy</span>
+            </p>
+        </div>
+    </div>
+</footer>

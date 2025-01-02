@@ -1,0 +1,32 @@
+.head{
+    font-size: 32px;
+}
+.form{
+    padding-left: 10%;
+}
+label{
+    font-size: 24px;
+}
+button{
+    background-color: #016635;
+    color: white;
+    border:0px !important;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 7px;
+}
+.acdel{
+    margin-top: 150px;
+}
+.spn1{
+
+    color: #016635;
+}
+.spn2{
+   
+        color: #FF0000;
+    
+}
+input{
+height: 50px;
+}

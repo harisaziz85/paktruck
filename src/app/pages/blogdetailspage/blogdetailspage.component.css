@@ -1,0 +1,93 @@
+.head{
+    font-size: 20px;
+}
+.txt{
+    font-size: 16px;
+}
+input{
+height: 45px;
+}
+button{
+    background-color: #016635;
+    color: white;
+    font-size: 20px;
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 1px solid #016635;
+}
+#carouselExampleIndicators{
+    height: 70vh;
+}
+.imgslider{
+    height: 70vh;
+}
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc; /* Default indicator color */
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-indicators li.active {
+    background-color: #016635; 
+  }
+  
+  .carousel-indicators {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  .carousel-indicators li::before {
+    content: ''; 
+  }
+  .buttonop{
+    background-color: #FA610E;
+    border: 0px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .heading{
+    font-size: 32px;
+  }
+  .iconclass{
+    color: #016635;
+  }
+  .sharebtn{
+    background-color: white;
+    border: 0px;
+    padding: 10px 20px ;
+    border-radius: 10px;
+  }
+  
+
+
+
+
+
+  .comment-header {
+    color: #016635; /* Set text color */
+  }
+  
+  .comment-number {
+    background-color: #016635; 
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .com{
+    font-size: 28px;
+  }
+  
+  .comment-line {
+    border: 0;
+    border-top: 2px solid #016635; 
+  }
+  

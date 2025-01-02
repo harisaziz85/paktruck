@@ -1,0 +1,88 @@
+.txt{
+    font-size: 24px;
+}
+.txt1{
+    font-size: 20px;
+    color: #016635;
+}
+.myads{
+    background-color: #fa610e4f;
+    color: #FA610E;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.boostbtn{
+    background-color: #016635;
+    border: 0px;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+.insbtn{
+    background-color: #FA610E;
+    border: 0px;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+
+}
+.secsection{
+    font-size: 16px;
+    color: black;
+}
+.fa-check{
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 2px;
+}
+.head{
+    font-size: 24px;
+}
+.head1{
+    font-size: 32px;
+}
+.pri{
+    color: #016635;
+    font-size: 24px;
+}
+.pri1{
+    color: #016635;
+    font-size: 20px;
+}
+.features{
+    font-size: 18px;
+}
+.featuresline{
+    line-height: 45px;
+    font-size: 18px;
+}
+.sellerdetails{
+    font-size: 20px;
+}
+.spn1{
+    font-size: 16px ;
+    color: #02B65F;
+}
+.org{
+    font-size: 20px;
+    color: #FA610E;
+}
+.detailssec{
+    border-left: 1px solid rgba(73, 73, 73, 0.397);
+}
+.card{
+    border-radius: 10px;
+}
+.card-body p{
+    line-height: 20px;
+}
+.sell{
+    color: white;
+    background-color: #016635;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}

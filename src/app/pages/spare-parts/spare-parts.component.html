@@ -1,0 +1,78 @@
+<div class="container-fluid  py-4 ">
+  <p class="mb-4 px-5 poppins-medium head">Truck and Machinery Used Parts</p>
+
+  <!-- Body Parts Section -->
+  <div class="main px-5 py-3">
+    <p class="poppins-medium head">Body Parts</p>
+    <p class="poppins-medium txt">Buy your Truck Body Parts in the Inventory of Verified PakTruck</p>
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let item of bodyParts">
+        <div class="card h-100">
+          <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+          <div class="card-body">
+            <p class="card-title poppins-medium txt">{{ item.name }}</p>
+            <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="px-5 py-4 my-5 main">
+      <p class="head poppins-medium">Cabin</p>
+      <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let item of cabinParts">
+          <div class="card h-100">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
+              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4 my-5 main">
+      <p class="head poppins-medium">Chassis</p>
+      <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let item of chassis">
+          <div class="card h-100">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
+              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4 my-5 main">
+      <p class="head poppins-medium">Tube</p>
+      <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let item of tube">
+          <div class="card h-100">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
+              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4 my-5 main">
+      <p class="head poppins-medium">Trunion</p>
+      <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let item of trunion">
+          <div class="card h-100">
+            <img [src]="item.image" class="card-img-top1" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
+              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

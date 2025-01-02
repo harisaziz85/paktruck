@@ -1,0 +1,125 @@
+<div class="container-fluid py-5 main">
+  <div class="px-4">
+  <p class="poppins-medium head">Auto store, factories & showroom</p>
+  <!-- Navigation -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="auto-stores-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#auto-stores"
+        type="button"
+        role="tab"
+        aria-controls="auto-stores"
+        aria-selected="true"
+      >
+        Auto Stores
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="factories-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#factories"
+        type="button"
+        role="tab"
+        aria-controls="factories"
+        aria-selected="false"
+      >
+        Factories
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="showrooms-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#showrooms"
+        type="button"
+        role="tab"
+        aria-controls="showrooms"
+        aria-selected="false"
+      >
+        Showrooms
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content mt-3" id="myTabContent">
+    <!-- Auto Stores -->
+    <div
+      class="tab-pane fade show active"
+      id="auto-stores"
+      role="tabpanel"
+      aria-labelledby="auto-stores-tab"
+    >
+      <div class="row">
+        <div class="col custom-col mb-3" *ngFor="let store of autoStores">
+          <div class="card">
+            <img
+              src="{{ store.image }}"
+              class="card-img-top"
+              alt="{{ store.title }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title poppins-medium">{{ store.title }}</h5>
+              <p class="card-text"> <i class="fas fa-map-marker-alt"></i> {{ store.location }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Factories -->
+    <div
+      class="tab-pane fade"
+      id="factories"
+      role="tabpanel"
+      aria-labelledby="factories-tab"
+    >
+      <div class="row">
+        <div class="col custom-col mb-3" *ngFor="let factory of factories">
+          <div class="card">
+            <img
+              src="{{ factory.image }}"
+              class="card-img-top"
+              alt="{{ factory.title }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title poppins-medium">{{ factory.title }}</h5>
+              <p class="card-text"> <i class="fas fa-map-marker-alt"></i> {{ factory.location }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Showrooms -->
+    <div
+      class="tab-pane fade"
+      id="showrooms"
+      role="tabpanel"
+      aria-labelledby="showrooms-tab"
+    >
+      <div class="row">
+        <div class="col custom-col mb-3" *ngFor="let showroom of showrooms">
+          <div class="card">
+            <img
+              src="{{ showroom.image }}"
+              class="card-img-top"
+              alt="{{ showroom.title }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title poppins-medium">{{ showroom.title }}</h5>
+              <p class="card-text"> <i class="fas fa-map-marker-alt"></i> {{ showroom.location }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

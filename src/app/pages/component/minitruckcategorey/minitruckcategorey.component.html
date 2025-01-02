@@ -1,0 +1,15 @@
+<div class="container-fluid main pb-5">
+  <div class="px-4">
+    <p class="poppins-medium head">Mini Truck Categories:</p>
+    <div class="row g-3">
+        <div class="col-custom" *ngFor="let category of categories">
+          <div class="card shadow-sm p-2">
+            <img src="{{ category.image }}" class="card-img-top p-2" alt="{{ category.title }}" />
+            <div class="card-body text-center">
+              <p class="card-title poppins-medium mb-0">{{ category.title }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>

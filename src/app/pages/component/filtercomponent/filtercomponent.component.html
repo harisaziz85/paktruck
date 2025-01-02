@@ -1,0 +1,51 @@
+<div class="px-3">
+    <p class="poppins-medium head1 ">
+        Browse More Used Trucks
+    </p>
+    <div class="row">
+        <p class="poppins-medium head">Used Truck by City</p>
+    <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckbyCity">
+        <div class="list-item poppins-medium txt" *ngFor="let item of column" >
+          <span class="dot"></span>
+          {{ item }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+        <p class="poppins-medium head">Used Truck by City</p>
+
+        <div class="col-md-3 mb-4" *ngFor="let column of Brand">
+          <div class="list-item">
+            <div class="d-flex gap-3">
+            <img [src]="column.image" alt="Brand image" class="img-fluid mb-2">
+              <h4 class="poppins-medium">{{ column.heading }}</h4>
+            </div>
+            
+            <div *ngFor="let item of column.cities" class="poppins-medium txt">
+              {{ item }}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <div class="row">
+        <p class="poppins-medium head">View Truck by Engine Capacity</p>
+    <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckbyBudget">
+        <div class="list-item poppins-medium txt" *ngFor="let item of column" >
+          <span class=""></span>
+          {{ item }}
+        </div>
+      </div>
+    </div>
+   
+    <div class="row">
+        <p class="poppins-medium head">Used Truck by Year</p>
+    <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckByYear ">
+        <div class="list-item poppins-medium txt" *ngFor="let item of column" >
+          <span class=""></span>
+          {{ item }}
+        </div>
+      </div>
+    </div>
+    </div>

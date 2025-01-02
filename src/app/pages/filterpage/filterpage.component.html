@@ -1,0 +1,60 @@
+<div class="container-fluid px-5">
+    <div class="row my-3">
+        <div class="col-md-4"><app-sidebar /></div>
+        <div class="col-md-8">
+            <div class="card py-3 px-4">
+                <div class="d-flex gap-3 align-items-center po">
+                    <span class="poppins-medium">Sort by: </span><select name="" id="" class="w-50 poppins-medium">
+                        <option value="" class="poppins-medium">Update Date: Recent First</option>
+                        <option value="" class="poppins-medium">Update Date: Oldest First</option>
+                        <option value="" class="poppins-medium">Price: Low to High</option>
+                        <option value="" class="poppins-medium">Price: High to Low </option>
+                        <option value="" class="poppins-medium">Model Year: Latest First</option>
+                        <option value="" class="poppins-medium">Mileage: Low to High</option>
+                        <option value="" class="poppins-medium">Mileage: High to Low </option>
+
+
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="row  p-0">
+                <div class="col-md-12 my-4 mb-4" *ngFor="let item of myads">
+                  <div class="card p-2">
+                    <div class="row">
+                        <div class="col-4">
+                    <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            
+                        </div>
+                        <div class="col-4 align-items-center">
+                            <h5 class="card-title poppins-medium text-muted">{{ item.name }}</h5>
+                      <p class="card-text poppins-medium">{{ item.price }}</p>
+                      <ul class=" mb-2 d-flex gap-4 poppins-medium">
+                        <li *ngFor="let detail of item.details" class=" poppins-medium sixcls">{{ detail }}</li>
+                      </ul>
+                      <p class="poppins-medium  sixcls"><i class="fa-solid fa-location-dot me-2"></i>{{ item.location }}</p>
+                      <p class="poppins-regular sixcls">{{ item.lastupdate }}</p>
+            
+                        </div>
+                        <div class="col-4 text-end ">
+                            <div ><button  class="bottombtn poppins-regular"><i class="fa-solid fa-phone-volume"></i>
+                              {{ item.submitbtn}}</button></div>
+            
+                        </div>
+                    </div>
+                      
+                  </div>
+                </div>
+              </div>
+        </div>
+
+    </div>
+    <app-paktruckmanage></app-paktruckmanage>
+    <app-filtercomponent></app-filtercomponent>
+
+</div>

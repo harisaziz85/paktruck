@@ -1,0 +1,50 @@
+<div class="container-fluid px-5">
+<div class=" d-flex addiv align-items-center justify-content-center  text-center my-4 rounded-4">
+    <p class="ads poppins-medium"> For Ads</p>
+</div>
+</div>
+<div class="container-fluid px-5">
+    <p>MJJC Pressure Washer Foam</p>
+    <div>
+        <div class="container my-4">
+            <h2 class="text-center mb-4">Pressure Washers</h2>
+          
+            <!-- Top Section: Gas and Electric Washers -->
+            <div class="row">
+              <div
+                class="col-md-12 mb-4"
+                *ngFor="let washer of washers"
+              >
+                <div class="card h-100">
+                  <img
+                    [src]="washer.image"
+                    class="card-img-top"
+                    alt="Washer Image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ washer.type }} Pressure Washer</h5>
+                    <p class="card-text">{{ washer.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Bottom Section: Parts -->
+            <div class="row mt-4">
+              <div
+                class="col-md-3"
+                *ngFor="let part of parts"
+              >
+                <div class="card">
+                  <img
+                    [src]="part.image"
+                    class="card-img-top"
+                    alt="Part Image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    </div>

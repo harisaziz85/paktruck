@@ -1,0 +1,51 @@
+<div class="main container-fluid">
+ <div class="px-5">
+    <div class="py-4">
+        <p class="head poppins-medium">Shops Name</p>
+        <p class="poppins-medium txt1">
+          <i class="fas fa-map-marker-alt me-3"></i>Lahore</p>
+        <p class="txt poppins-medium">Post Ads</p>
+    </div>
+    <div class="col-md-12 mb-4" *ngFor="let item of myads">
+      <div class="card p-2 my-2">
+        <div class="row">
+            <div class="col-3">
+        <img [src]="item.image" class="cad-img-topr" alt="{{ item.name }}">
+
+            </div>
+            <div class="col-4 align-items-center">
+              <h5 class="desc poppins-medium poppins-semibold">{{ item.desc }}</h5>
+
+                <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text poppins-medium">{{ item.price }}</p>
+          <p class="card-text poppins-medium"><i class="fas fa-location-dot"></i>{{ item.location }}</p>
+          <ul class="list-unstyled mb-2 d-flex gap-3">
+            <li *ngFor="let detail of item.details" class="card-text poppins-medium">{{ detail }}</li>
+          </ul>
+          <p class="card-text poppins-regular">{{ item.lastupdate }}</p>
+  <div class="col-4 text-end ">
+                <div ><button  class="bottombtn">{{ item.submitbtn}}</button></div>
+
+            </div>
+            </div>
+          
+        </div>
+          
+      </div>
+    </div>
+    <div class="my-4">
+      <p class="txt poppins-medium">Spare Parts</p>
+      <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let item of bodyParts">
+          <div class="card h-100">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title poppins-medium">{{ item.name }}</h5>
+              <p class="card-text poppins-medium">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-sparepartscompon></app-sparepartscompon>
+  </div></div>

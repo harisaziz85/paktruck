@@ -1,0 +1,85 @@
+<div class="container-fluid main1  p-5 " >
+    <p class="head poppins-medium  mb-3">Browse Used Factories Truck</p>
+    <ul class="nav nav-tabs " id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link  active" id="category-tab" data-bs-toggle="tab" data-bs-target="#category" type="button"
+          role="tab" aria-controls="category" aria-selected="true">
+          Category
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="city-tab" data-bs-toggle="tab" data-bs-target="#city" type="button" role="tab"
+          aria-controls="city" aria-selected="false">
+          City
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="brands-tab" data-bs-toggle="tab" data-bs-target="#brands" type="button" role="tab"
+          aria-controls="brands" aria-selected="false">
+          Brands
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="budget-tab" data-bs-toggle="tab" data-bs-target="#budget" type="button" role="tab"
+          aria-controls="budget" aria-selected="false">
+          Budget
+        </button>
+      </li>
+    </ul>
+  
+    <!-- Tab Content -->
+    <div class="tab-content mt-4" id="myTabContent">
+      <!-- Category Tab -->
+      <div class="tab-pane fade show active p-2" id="category" role="tabpanel" aria-labelledby="category-tab">
+        <div class="row g-3">
+          <div class="col-custom" *ngFor="let category of categories">
+            <div class="card shadow-sm p-2">
+              <img src="{{ category.image }}" class="card-img-top p-2" alt="{{ category.title }}" />
+              <div class="card-body text-center">
+                <p class="card-title poppins-medium mb-0">{{ category.title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <!-- City Tab -->
+      <div class="tab-pane fade" id="city" role="tabpanel" aria-labelledby="city-tab">
+        <div class="row g-3">
+          <div class="col-custom mb-4" *ngFor="let column of cities">
+            <div class="list-item poppins-regular text-muted" *ngFor="let item of column">
+              <span class="dot"></span>
+              {{ item }}
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <!-- Brands Tab -->
+      <div class="tab-pane fade text-start" id="brands" role="tabpanel" aria-labelledby="brands-tab">
+        <div class="row text-start">
+          <div class="col-md-4 text-start" *ngFor="let column of columns">
+            <div *ngFor="let brand of column" class="logo-item text-muted poppins-regular">
+              <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
+              {{ brand.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Budget Tab -->
+      <div class="tab-pane fade" id="budget" role="tabpanel" aria-labelledby="budget-tab">
+        <div class="row g-3">
+          <div class="col-md-4 mb-4" *ngFor="let column of budgets">
+            <div class="list-item poppins-regular text-muted" *ngFor="let item of column">
+              <span class="dot"></span>
+              {{ item }}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>

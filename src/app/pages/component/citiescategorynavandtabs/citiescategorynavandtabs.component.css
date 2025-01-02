@@ -1,0 +1,98 @@
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px; 
+    justify-content: start; 
+  }
+  .main1{
+    background-color: #E9EEEB;
+  }
+  .tab-pane {
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .custom-card {
+    flex: 0 0 calc(20% - 5px); 
+  }
+  
+  .card {
+    width: 100%; 
+  }
+  .card-img-top{
+    background-color: #F0F0F0;
+  }
+  .card-title{
+    font-size: 14px;
+  }
+  .head{
+    font-size: 32px;
+  }
+  .nav-tabs{
+
+    border: 0px !important;
+    padding: 0px !important;
+  }
+  .nav-link{
+    font-size: 32px;
+    background-color: rgba(0, 255, 255, 0);
+    color: grey ;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    font-size: 32px;
+    background-color: rgba(0, 255, 255, 0) !important;
+    border: 0px !important;
+    color: #016635;
+  }
+.col-custom {
+    flex: 0 0 20%; 
+    max-width: 20%; 
+  }
+  
+  @media (max-width: 1200px) {
+    .col-custom {
+      flex: 0 0 25%; 
+      max-width: 25%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .col-custom {
+      flex: 0 0 33.33%; 
+      max-width: 33.33%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .col-custom {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-custom {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+.list-item{
+    font-size: 20px;
+    line-height: 40px !important;
+
+}  
+.logo-item {
+    margin-bottom: 20px;
+
+  }
+  
+  .brand-logo {
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+    border-radius: 50%; 
+  }
+  .logo-item{
+    font-size: 20px;
+    line-height: 20px !important;
+  }

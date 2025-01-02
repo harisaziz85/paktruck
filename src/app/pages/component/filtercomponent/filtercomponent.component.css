@@ -1,0 +1,26 @@
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .list-item {
+    margin-bottom: 20px; 
+    line-height: 30px;
+  }
+  .head{
+    font-size: 32px;
+    color: #016635;
+  }
+  .head1{
+    font-size: 32px;
+  }
+  h4{
+    color: #016635;
+  }
+  .txt{
+    font-size: 20px;
+  }

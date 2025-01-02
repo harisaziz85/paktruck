@@ -1,0 +1,19 @@
+.card{
+    border-radius: 10px !important;
+}
+.main{
+    background-color: #0166351e;
+}
+.head{
+    font-size: 32px;
+}
+.txt{
+    font-size: 20px;
+}
+.txt1{
+    font-size: 20px;
+    color: #016635;
+}
+.card-img-top1{
+    height: 160px;
+}

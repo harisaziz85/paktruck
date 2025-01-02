@@ -1,0 +1,13 @@
+ul li a{
+    font-size: 20px;
+    
+}
+ul li a:hover{
+    color: #016635;
+    text-decoration: underline;
+text-underline-offset: 10px;
+
+}
+.navbar{
+    box-shadow: 5px 4px 10px rgba(99, 97, 97, 0.219);
+}

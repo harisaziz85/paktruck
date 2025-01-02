@@ -1,0 +1,15 @@
+<div class="container-fluid ">
+  <div class="row  py-3 bg-white px-4  ">
+    <div class="d-flex justify-content-between py-4">
+      <p class="poppins-medium head">Truck & Machinery Used Parts</p>
+      <p class="poppins-medium txt">View all Spare Parts</p>
+    </div>
+    <div class="col-md-3 mb-4" *ngFor="let column of data">
+      <div class="list-item poppins-medium" *ngFor="let item of column">
+        <span class="dot"></span>
+        {{ item }}
+      </div>
+    </div>
+  </div>
+</div>
+  

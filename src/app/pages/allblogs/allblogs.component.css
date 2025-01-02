@@ -1,0 +1,91 @@
+.head{
+    font-size: 32px;
+}
+
+input{
+    height: 50px;
+    background-color: white;
+    border:0px;
+    border: 1px solid rgba(128, 128, 128, 0.644);
+    border-radius: 10px;
+}
+button{
+    border-radius: 10px;
+    height: 50px;
+    border: 0px;
+    background-color: #016635;
+    color: white;
+    padding-left:20px ;
+    padding-right:20px ;
+}
+.top{
+    background-color: #016635;
+   width: fit-content;
+    font-size: 32px;
+    border-radius:15px 0px 100px 0px ;
+    color: white;
+}
+.hero{
+    background-image: url('../../../../public/images/bloghro.png');
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+.bottombg{
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 0px 0px 15px 15px;
+    height: 35vh;
+}
+.title{
+    font-size: 44px;
+}
+.txt{
+    font-size: 20px;
+    color: #FA610E;
+}
+.blogs{
+    background-color: #E9EEEB;
+}
+.posthead{
+    font-size: 32px;
+}
+.spn{
+    background-color: #016635;
+     padding: 10px 15px;
+     border-radius: 10px;
+     font-size: 20px;
+}
+.txt1{
+    font-size: 20px;
+    background-color: white;
+    padding: 15px 12px;
+    border-radius: 10px;
+
+}
+.postimg{
+    width: 200px;
+}
+.card-title{
+    font-size: 32px;
+}
+.date{
+    font-size: 24p;
+    color: #016635;
+}
+.card-text{
+    font-size: 20px;
+}
+.page-item .page-link{
+    border: 0px !important;
+    color: #016635 !important;
+    background-color: #01663500;
+    font-size: 20px;
+}
+.page-link{
+    border: 0px !important;
+    color: #ffffff !important;
+    background-color:#016635;
+    font-size: 20px;
+}

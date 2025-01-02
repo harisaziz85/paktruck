@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <!-- Header -->
+    <h3 class="mb-4">Recent Posts</h3>
+  
+    <!-- Blog List -->
+    <div class="row gy-4">
+      <div class="col-12" *ngFor="let post of posts">
+        <div class="card shadow-sm border-0 rounded">
+          <div class="row g-0">
+            <!-- Image -->
+            <div class="col-md-4">
+              <img [src]="post.image" class="img-fluid rounded-start" alt="Blog Image" />
+            </div>
+            <!-- Content -->
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">{{ post.title }}</h5>
+                <p class="text-success mb-1">
+                  <strong>{{ post.author }}</strong> • {{ post.date }}
+                </p>
+                <p class="card-text text-muted">{{ post.summary }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination -->
+    <nav aria-label="Blog Pagination" class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+  

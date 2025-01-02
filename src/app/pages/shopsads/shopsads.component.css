@@ -1,0 +1,42 @@
+.main{
+    background-color: #F5F5F5;
+}
+.card-img-top{
+    height: fit-content;
+}
+.card{
+    position: relative;
+    line-height: 20px;
+}
+button{
+    border: 0px ;
+    padding: 10px 20px;
+     border-radius: 7px; 
+}
+.bottombtn{
+    position: absolute;
+   bottom: 5px;
+   right: 5px; font-size: 16px;
+   background-color: #FA610E;
+   color: white;
+}
+.head{
+    font-size: 44px;
+}
+.txt{
+    font-size: 32px;
+}
+.txt1{
+    font-size: 20px;
+}
+.desc{
+    font-size: 20px;
+    color: #494949;
+}
+.card-title{
+    font-size: 20px;
+    color: #016635;
+}
+.card-text{
+    font-size: 16px;
+}

@@ -1,0 +1,133 @@
+<div class="container-fluid px-5">
+    <div class="bg-white py-5">
+        <hr>
+        <div class="row px-4 py-3">
+            <div class="col-md-3">
+                <p class="poppins-medium txt">Manage this Ad</p>
+                <p class="poppins-regular txt1">Active</p>
+                <button class="poppins-medium myads">Go to My Ads<i class="fa-solid fa-arrow-right ms-2"></i></button>
+            </div>
+            <div class="col-md-5 text-center">
+                <button class="poppins-medium boostbtn my-4">Boost This Ad</button>
+                <button class="poppins-medium insbtn my-4">Attach Inspection Report</button>
+                <div class="d-flex justify-content-center">
+                    <p class="poppins-regular secsection me-3"><i class="me-3 fa-regular fa-pen-to-square"></i>Edit</p>
+                    <p class="poppins-regular secsection me-3"><i class="me-3 fa-solid fa-check"></i>Mark as Sold</p>
+                    <p class="poppins-regular secsection me-3"><i class="me-3 fa-solid fa-trash-can"></i>Remove your ad
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex gap-3 text-center poppins-regular">
+                <div>
+                    <p><i class="fa-solid fa-eye"></i></p>
+                    <p>0</p>
+                    <p>Ad View</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-eye"></i></p>
+                    <p>0</p>
+                    <p>Total Search View</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-phone"></i></p>
+                    <p>0</p>
+                    <p>Phone Count</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5 w-100">
+        <img src="images/mtruck.png" class="img-fluid w-100" alt="Truck Image">
+        <div class="row py-5">
+            <div class="col-md-6">
+                <div *ngFor="let data of truckdetails">
+                    <p class="head poppins-medium text-muted">{{ data.name }}</p>
+                    <p class="poppins-medium pri">{{ data.price }}</p>
+                    <p class="head poppins-regular text-muted">{{ data.description }}</p>
+                    <p class="head1 poppins-medium">Truck Details</p>
+                    <ul class="d-flex list-unstyled gap-3">
+                        <li *ngFor="let feature of data.features" class="features text-muted poppins-regular " [innerHTML]="feature"></li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Brand</p>
+                            <p class="poppins-regular features " >{{ data.brand }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Model</p>
+                            <p class="poppins-regular features " >{{ data.model }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Color</p>
+                            <p class="poppins-regular features " >{{ data.color }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Register</p>
+                            <p class="poppins-regular features " >{{ data.register }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Body Type</p>
+                            <p class="poppins-regular features " >{{ data.bodyType }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Engine Capacity</p>
+                            <p class="poppins-regular features " >{{ data.engineCapacity }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="poppins-medium pri1 ">Assembly</p>
+                            <p class="poppins-regular features " >{{ data.assembly }}</p>
+                        </div>
+                    </div>
+                    <p class="poppins-medium head1">Truck Features</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4" *ngFor="let column of columns">
+                                <ul class="list-unstyled">
+                                    <li *ngFor="let feature of column" class="text-muted poppins-regular featuresline " [innerHTML]="feature"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div *ngFor="let details of sellerdetails" class="detailssec ps-2">
+                    <p class="poppins-medium sellerdetails text-muted ">Seller Details <span class="spn1">{{details.detail}}</span> </p>
+                    <p class="poppins-medium org">PKR <span class="text-muted">{{details.price}}</span></p>
+                    <p class="poppins-regular org">Address <span class="text-muted">{{details.address}}</span></p>
+                    <p class="poppins-medium sellerdetails  text-muted"><i class="fa-solid me-3 fa-comment-dots"></i>Seller Comments </p>
+                    <p class="poppins-regular text-muted features">{{details.comment}}</p>
+                    <p class="poppins-medium " style="font-size: 20px;">Mention <span class="org">PakTruck.com </span>when calling Seller to get a good deal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pb-5">
+        <p class="poppins-medium head1 ">Similar Ads</p>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let relate of relatedads">
+              <div class="card">
+                <img [src]="relate.image" class="card-img-top img-fluid" alt="Gallery Image" />
+                <div class="card-body poppins-medium sellerdetails">
+                  <p class="">{{ relate.name }}</p>
+                  <p class=" pri1">{{ relate.price}}</p>
+                  <p class="">{{ relate.location}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+    </div>
+    
+</div>
+<div class="bg-white px-5">
+<div class="bg-white row py-5 mb-5 px-4 overflow-hidden">
+    <div class="col-md-8">
+        <p class="poppins-medium head1">Post an ad for FREE</p>
+        <p class="poppins-regular sellerdetails">To sell a Truck quickly to thousands of buyers, a strong multi-channel approach and targeted marketing strategy can help maximize reach and appeal to potential buyers. 
+          <br>  <button class="mt-2 poppins-medium sell">Sell Your Truck</button>
+        </p>
+    </div>
+    <div class="col-md-4 text-center"><img src="images/truck.png" height="200" alt=""></div>
+</div></div>

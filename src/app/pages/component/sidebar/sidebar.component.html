@@ -1,0 +1,51 @@
+<div class="p-3 bg-white border rounded">
+  <p class="poppins-medium top">Show Result By Filter:</p>
+
+  <!-- Search Bar -->
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control search"
+      placeholder="Search By Keywords"
+      [(ngModel)]="searchQuery"
+    />
+    <button class="btn btn-success poppins-medium" (click)="searchByKeyword()">Search</button>
+  </div>
+
+  <!-- Filter Options -->
+  <div *ngFor="let filter of filters" class="mb-2">
+    <div
+      class="d-flex justify-content-between align-items-center"
+      (click)="toggleDropdown(filter.key)"
+      style="cursor: pointer;"
+    >
+      <span class="head poppins-medium text-muted">{{ filter.label }}</span>
+      <span>
+        <i
+          class="fa text-muted"
+          [ngClass]="{
+            'fa-chevron-down': activeDropdown !== filter.key,
+            'fa-chevron-up': activeDropdown === filter.key
+          }"
+        ></i>
+      </span>
+      
+    </div>
+    <div *ngIf="activeDropdown === filter.key" class="mt-2 dp">
+      <ul class="list-group">
+        <li
+          *ngFor="let option of filter.options"
+          class="list-group-item d-flex align-items-center"
+        >
+          <input
+            type="checkbox"
+            class="form-check-input me-2"
+            [checked]="isSelected(filter.key, option)"
+            (change)="onOptionToggle(filter.key, option, $event)"
+          />
+          <label class="poppins-medium">{{ option }}</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

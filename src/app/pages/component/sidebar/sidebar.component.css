@@ -1,0 +1,21 @@
+.head{
+    font-size: 18px;
+    line-height: 30px;
+}
+.top{
+    font-size: 20px;
+    color: #016635;
+}
+.btn-success{
+    background-color: #016635 !important;
+}
+.search{
+    height: 50px;
+}
+.list-group-item{
+    background-color: #ffffff00;
+    border: 0px !important;
+}
+.form-check-input:checked{
+    background-color: #016635;
+}

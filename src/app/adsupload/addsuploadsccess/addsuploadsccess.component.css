@@ -1,0 +1,26 @@
+.head{
+    font-size: 32px;
+    color: #016635;
+}
+.txt{
+    font-size: 24px;
+}
+.viewbtn{
+color: white;
+border: 0px;
+border-radius: 10px;
+background-color: #016635;
+padding: 10px 20px;
+margin-right: 10px;
+}
+.postbtn{
+    color: white;
+    border: 0px;
+border-radius: 10px;
+background-color: #FA610E;
+padding: 10px 20px;
+
+}
+li{
+    line-height: 35px;
+}

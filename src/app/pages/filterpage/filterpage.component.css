@@ -1,0 +1,50 @@
+select{
+    background-color: #C2DACF;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+select:focus{
+    background-color: #C2DACF;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+select option{
+    padding: 10px 20px !important;
+    font-size: 16px;
+}
+span{
+    font-size: 18px;
+}
+.main{
+    background-color: #F5F5F5;
+}
+.card-img-top{
+    height: 200px;
+}
+button{
+    border: 0px ;
+    padding: 10px 20px;
+     border-radius: 7px;
+}
+.bottombtn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FA610E;
+    color: white;
+}
+.card-title{
+    font-size: 20px;
+}
+.card-text{
+    font-size: 20px;
+    color: #016635;
+}
+.d-flex{
+    font-size: 16px;
+}
+.sixclass{
+    font-size: 16px;
+}

@@ -1,0 +1,92 @@
+.main{
+    background-color: #F5F5F5;
+
+}
+.hero{
+  background-image: url('../../../../public/images/heroimg.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+  border-radius: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.overly{
+  background-color: rgba(0, 0, 0, 0.411);
+  min-height: 70vh;
+  border-radius: 20px;
+
+}
+.btn-orange {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+}
+.search{
+  background-color: white;
+}
+.btn-orange:hover {
+  background-color: #E64A19;
+}
+
+input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+.manage{
+  background-color: #0166351a;
+}
+select{
+  height: 50px;
+}
+.filtrbtn{
+  padding: 10px 40px;
+  border: 2px solid white;
+  background-color: #fafafa9d;
+  font-family: 16px;
+  border-radius: 20px;
+}
+.head{
+  font-size: 32px;
+}
+.txt{
+  font-size: 16px;
+  background-color: #0166353a;
+  padding: 10px 15px;
+}
+.fea{
+  background-color: #016635e8;
+  position: absolute;
+  border-radius: 10px 0px 90px 0px;
+  color: white;
+  font-size: 16px;
+}
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+.custom-dropdown {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.input-fields label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-fields input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.output p {
+  margin: 5px 0;
+}

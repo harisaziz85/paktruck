@@ -1,0 +1,20 @@
+<div class=" manage my-3 ">
+    <div class="d-flex py-3 px-2 justify-content-between px-4 ">
+        <p class="head poppins-medium">Featured Used Truck for Sale</p>
+        <p class="text-success poppins-medium txt">View all featured used Truck</p>
+    </div>
+    
+    
+    <div class="row px-4">
+        <div class="col-md-3 mb-4" *ngFor="let item of  FeaturedUsedTruck">
+          <div class="card h-100 ">
+            <div class="fea poppins-regular p-2"  style="height: 50px; width: 50%;">Featured</div>
+            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

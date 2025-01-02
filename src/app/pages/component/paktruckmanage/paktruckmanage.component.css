@@ -1,0 +1,18 @@
+.manage{
+  background-color: #0166351a;
+}
+.head{
+    font-size: 32px;
+  }
+.txt{
+    font-size: 16px;
+    background-color: #0166353a;
+    padding: 10px 15px;
+  }
+  .fea{
+    background-color: #016635e8;
+    position: absolute;
+    border-radius: 10px 0px 90px 0px;
+    color: white;
+    font-size: 16px;
+  }

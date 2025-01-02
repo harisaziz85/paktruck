@@ -1,0 +1,14 @@
+input{
+    height: 50px;
+}
+.form-check-input{
+    height: 20px;
+    width: 20px;
+}
+button{
+    background-color: #018A48;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px 20px ;
+}

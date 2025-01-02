@@ -1,0 +1,30 @@
+.main{
+    background: linear-gradient(45deg, #016635 60%, #02CC6A 100%);
+    color: white;
+}
+.head{
+    font-size: 32px;
+}
+.txt{
+    font-size: 24px;
+}
+input{
+    width: 40%;
+    height: 50px;
+    border-radius: 11px;
+    padding-left: 10px;
+border: 0px !important;
+position: relative;
+}
+button{
+    height: 50px;
+    background-color: #FA610E;
+    border: 0px !important;
+    color:white;
+   position: absolute;
+right: 30%;
+padding-left: 30px;
+padding-right: 30px;
+border-radius: 11px;
+
+}

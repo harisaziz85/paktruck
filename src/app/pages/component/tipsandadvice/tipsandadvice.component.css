@@ -1,0 +1,23 @@
+.card{
+    border-radius: 10px;
+}
+.head{
+    font-size: 32px
+}
+.imgtxt{
+    background-color: #016635;
+    position: absolute;
+    bottom: 30%;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: white;
+    border-radius: 0px 50px 0px 0px;
+}
+
+.advicehead{
+font-size: 16px;
+color: #016635;
+}
+.txt{
+    font-size: 16px;
+}

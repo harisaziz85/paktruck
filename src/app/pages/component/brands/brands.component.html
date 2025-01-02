@@ -1,0 +1,12 @@
+<div class="container-fluid py-5">
+    <p class="text-center head poppins-medium">Turcks Brands</p>
+    <div class="row text-start px-5">
+        <div class="col-md-4 text-start" *ngFor="let column of columns">
+          <div *ngFor="let brand of column" class="logo-item poppins-medium">
+            <img [src]="brand.logo" [alt]="brand.name" class="brand-logo my-3" />
+            {{ brand.name }}
+          </div>
+        </div>
+      </div>
+</div>
+  

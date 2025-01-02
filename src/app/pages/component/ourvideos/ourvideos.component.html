@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+      <!-- Loop through videos -->
+      <div class="col-md-4" *ngFor="let video of videos; let i = index">
+        <div class="card mb-4 shadow-sm">
+          <div class="position-relative">
+            <!-- Thumbnail Image -->
+            <img 
+              [src]="video.thumbnail" 
+              class="card-img-top rounded-circle" 
+              alt="Video thumbnail"
+            />
+            <!-- Play Button -->
+            <button 
+              class="btn btn-dark position-absolute top-50 start-50 translate-middle rounded-circle p-2" 
+              data-bs-toggle="modal" 
+              [attr.data-bs-target]="'#videoModal' + i"
+            >
+              <i class="bi bi-play-fill"></i>
+            </button>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">{{ video.title }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Video Modals -->
+      <div *ngFor="let video of videos; let i = index">
+        <div 
+          class="modal fade p-0" 
+          [id]="'videoModal' + i" 
+          tabindex="-1" 
+          aria-labelledby="videoModalLabel" 
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg p-0">
+            <div class="modal-content p-0">
+                <button 
+                  type="button" 
+                  class="btn-close" 
+                  data-bs-dismiss="modal" 
+                  aria-label="Close"
+                ></button>
+              <div class="modal-body p-0">
+                <!-- Video Player -->
+                <div class="ratio ratio-16x9">
+                  <video controls>
+                    <source [src]="video.src" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

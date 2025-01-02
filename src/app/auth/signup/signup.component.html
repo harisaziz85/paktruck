@@ -1,0 +1,150 @@
+<div class="contaier-fluid main overflow-hidden">
+    <div class="row">
+        <div class="col-md-5 py-5 px-5">
+            <p class="head poppins-semibold text-white pb-5">Getting <br>
+                Start PakTrucks World</p>
+                <img src="images/truck.png" class="img-fluid mt-5" alt="">
+        </div>
+        <div class="col-md-7 formcol">
+<div class="text-end">
+    <Select class="selectoption poppins-medium">
+        <option value="">English (UK)</option>
+        <option value="">URDU</option>
+
+    </Select>
+</div>
+<div>
+    <p class="mt-5 headform poppins-bold">Create Account</p>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <input
+          type="text"
+          id="fullname"
+          class="form-control"
+          formControlName="fullname"
+          placeholder="Full Name"
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group otpform">
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Email"
+        />
+        <button class="otpbutton poppins-regular"> SEND OTP</button>
+      </div>
+  
+      <!-- Phone -->
+      <div class="form-group">
+        <input
+          type="text"
+          id="phone"
+          class="form-control"
+          formControlName="phone"
+          placeholder="Enter OTP"
+        />
+      </div>
+  
+      <!-- Password -->
+      <div class="form-group position-relative">
+        <input
+          [type]="isPasswordVisible ? 'text' : 'password'"
+          id="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <i 
+  class="fas visibility-icon"
+  [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"
+  (click)="togglePasswordVisibility()">
+</i>
+
+      </div>
+      
+      
+
+  
+
+  
+      <!-- Radio Button -->
+      <div class="form-group d-flex align-items-center gap-3">
+        <label class="form-label me-3 poppins-medium role">Choose your role:</label>
+        <div class="form-check-inline">
+          <input
+            type="radio"
+            id="individual"
+            formControlName="type"
+            value="individual"
+            class="form-check-input mx-2 radio"
+          />
+          <label for="individual" class="form-check-label">Individual</label>
+        </div>
+        <div class="form-check-inline">
+          <input
+            type="radio"
+            id="shop"
+            formControlName="type"
+            value="shop"
+            class="form-check-input mx-2 radio"
+          />
+          <label for="shop" class="form-check-label">Shop Owner</label>
+        </div>
+      </div>
+      
+  
+      <!-- Conditional Fields for Shop -->
+      <div *ngIf="userForm.get('type')?.value === 'shop'">
+        <!-- Shop Name -->
+        <div class="form-group">
+          <input
+            type="text"
+            id="shopName"
+            class="form-control"
+            formControlName="shopName"
+            placeholder="Shop Name"
+          />
+        </div>
+  
+        <!-- Shop Address -->
+        <div class="form-group">
+          <input
+            type="text"
+            id="shopAddress"
+            class="form-control"
+            formControlName="shopAddress"
+            placeholder="Shop Address"
+          />
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn submit  w-100" >
+        Create Account 
+      </button>
+    </form>
+      <div>
+        <p class="txt1 poppins-medium my-4">Already have an account? <a routerLink="/auth/login" class="clr">Log In</a></p>
+        <div class="d-flex align-items-center justify-content-center my-3">
+            <div class="flex-grow-1 border-bottom"></div>
+            <span class="mx-2 text-muted">OR</span>
+            <div class="flex-grow-1 border-bottom"></div>
+          </div>
+          <div class="text-center">
+            <button class="mx-2 endbtn" routerLink=""><img src="images/google.png" class="imgicon" alt=""> Signup with Google</button>
+            <button class="mx-2 endbtn" routerLink="/auth/phone-login"><img src="images/phoneicon.png" class="imgicon" alt=""> Signup with Phone no</button>
+            
+          </div>
+          
+          
+      </div>
+</div>
+        </div>
+    </div>
+</div>
