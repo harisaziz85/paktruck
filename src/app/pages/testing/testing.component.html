@@ -1,0 +1,31 @@
+<div *ngIf="loading" class="loading">Loading ads...</div>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<div *ngIf="ads.length > 0; else noAds">
+    <div *ngFor="let ad of ads" class="ad-card">
+        <img *ngIf="ad.images.length > 0" [src]="ad.images[0]" alt="Ad Image" class="ad-image" />
+        <h3>{{ ad.make }} - {{ ad.subCategory }}</h3>
+        <p>Price: {{ ad.price | currency }}</p>
+        <p>Location: {{ ad.location }}</p>
+        <p>subCategory: {{ ad.category }}</p>
+        <p>SubCategory: {{ ad.subCategory }}</p>
+        <p>Year: {{ ad.modelYear }}</p>
+        <p>{{ ad.description }}</p>
+        <button class="view-btn" (click)="viewDetails(ad._id)">View Details</button>
+    </div>
+</div>
+
+<ng-template #noAds>
+    <p>No ads available.</p>
+</ng-template>
+
+
+<!-- You can conditionally display the ad details after fetching -->
+<div *ngIf="adDetails">
+    <h2>Ad Details</h2>
+    <p><strong>Make:</strong> {{ adDetails.make }}</p>
+    <p><strong>Model Year:</strong> {{ adDetails.modelYear }}</p>
+    <p><strong>Price:</strong> {{ adDetails.price }}</p>
+    <p><strong>Description:</strong> {{ adDetails.description }}</p>
+    <img *ngFor="let img of adDetails.images" [src]="img" alt="Ad Image" width="200" />
+</div>

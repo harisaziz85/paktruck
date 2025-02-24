@@ -7,15 +7,17 @@ import { MyalertsComponent } from './myalerts/myalerts.component';
 import { VarificationComponent } from './varification/varification.component';
 import { ChatComponent } from './chat/chat.component';
 import { ShowroomprofileComponent } from './showroomprofile/showroomprofile.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
-  {path:'editprofile', component:EditprofileComponent},
-  {path:'myads', component:MyadsComponent},
-  {path:'savedads', component:SaveadsComponent},
-  {path:'myalerts', component:MyalertsComponent},
-  {path:'varification', component:VarificationComponent},
-  {path:'chat', component:ChatComponent},
-  {path:'showroom-profile', component:ShowroomprofileComponent},
+  { path: 'profile', component: ProfileComponent },
+  { path: 'editprofile', component: EditprofileComponent },
+  { path: 'myads', component: MyadsComponent },
+  { path: 'savedads', component: SaveadsComponent },
+  { path: 'myalerts', component: MyalertsComponent },
+  { path: 'varification', component: VarificationComponent },
+  { path: 'chat', component: ChatComponent },
+  { path: 'showroom-profile', component: ShowroomprofileComponent },
 
 
 

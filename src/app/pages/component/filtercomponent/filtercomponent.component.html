@@ -1,13 +1,14 @@
-<div class="px-3">
-    <p class="poppins-medium head1 ">
-        Browse More Used Trucks
+<div class="main1">
+    <p class="poppins-medium head1 text-left ">
+        <!-- Browse More Used Trucks -->
     </p>
     <div class="row">
-        <p class="poppins-medium head">Used Truck by City</p>
+        <p class="poppins-medium head">Fillter all sapre parts and trucks</p>
     <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckbyCity">
         <div class="list-item poppins-medium txt" *ngFor="let item of column" >
-          <span class="dot"></span>
-          {{ item }}
+          <a routerLink="filterpage" class="text-decoration-none text-muted">
+          <span class="dot" style="background-color: grey;" ></span>
+          {{ item }}</a>
         </div>
       </div>
     </div>
@@ -23,7 +24,9 @@
             </div>
             
             <div *ngFor="let item of column.cities" class="poppins-medium txt">
-              {{ item }}
+            <a routerLink="filterpage" class="text-decoration-none text-muted">
+
+              {{ item }}</a>
             </div>
           </div>
         </div>
@@ -33,8 +36,9 @@
         <p class="poppins-medium head">View Truck by Engine Capacity</p>
     <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckbyBudget">
         <div class="list-item poppins-medium txt" *ngFor="let item of column" >
+          <a routerLink="filterpage" class="text-decoration-none text-muted">
           <span class=""></span>
-          {{ item }}
+          {{ item }}</a>
         </div>
       </div>
     </div>
@@ -43,8 +47,9 @@
         <p class="poppins-medium head">Used Truck by Year</p>
     <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckByYear ">
         <div class="list-item poppins-medium txt" *ngFor="let item of column" >
+          <a routerLink="" class="text-decoration-none text-muted">
           <span class=""></span>
-          {{ item }}
+          {{ item }}</a>
         </div>
       </div>
     </div>

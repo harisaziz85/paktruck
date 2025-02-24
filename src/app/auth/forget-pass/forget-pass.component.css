@@ -4,6 +4,9 @@
 select{
     border: 0px;
 }
+.main1{
+    margin-top: 118px;
+}
 img{
     height: 300px;
 }
@@ -39,8 +42,8 @@ input{
     font-size: 32px;
 }
 ::placeholder{
-    font-size: 24px;
-    font-size: bold;
+    font-size: 16px;
+    font-weight: 500;
 }
 .roleclr{
     color: #016635;

@@ -1,0 +1,47 @@
+<div class="container my-5">
+    <h2 class="mb-4 fw-bold">Browse Our Videos</h2>
+    
+    <div class="row">
+      <!-- Featured Video (First Video) -->
+      <div class="col-md-8">
+        <div class="video-card large">
+          <a [href]="videos[0].videoUrl" target="_blank">
+            <img [src]="videos[0].thumbnail" class="img-fluid rounded" alt="Video Thumbnail">
+            <div class="overlay">
+              <i class="fa fa-play play-icon"></i>
+            </div>
+          </a>
+          <p class="mt-2">{{ videos[0].title }}</p>
+        </div>
+      </div>
+  
+      <!-- Right Column (Smaller Videos) -->
+      <div class="col-md-4 d-flex flex-column">
+        <div *ngFor="let video of videos.slice(1, 3)" class="video-card small mb-3">
+          <a [href]="video.videoUrl" target="_blank">
+            <img [src]="video.thumbnail" class="img-fluid rounded" alt="Video Thumbnail">
+            <div class="overlay">
+              <i class="fa fa-play play-icon"></i>
+            </div>
+          </a>
+          <p class="mt-2">{{ video.title }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Row (More Videos) -->
+    <div class="row mt-4">
+      <div *ngFor="let video of videos.slice(3)" class="col-md-4">
+        <div class="video-card">
+          <a [href]="video.videoUrl" target="_blank">
+            <img [src]="video.thumbnail" class="img-fluid rounded" alt="Video Thumbnail">
+            <div class="overlay">
+              <i class="fa fa-play play-icon"></i>
+            </div>
+          </a>
+          <p class="mt-2">{{ video.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

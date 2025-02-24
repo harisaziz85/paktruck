@@ -2,6 +2,19 @@
     background-color: #F5F5F5;
 
 }
+.buton1{
+  background-color: #016635;
+  color: white !important;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 12px;
+}
+.buton{
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid grey;
+  border-radius: 12px;
+}
 .hero{
   background-image: url('../../../../public/images/heroimg.png');
   background-position: center;
@@ -18,9 +31,18 @@
 
 }
 .btn-orange {
-  background-color: #FF5722;
+  background-color: rgba(1, 102, 53, 1);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
   color: white;
   border: none;
+}
+.fa-search{
+  font-size: 18px !important;
+}
+.txt1{
+  font-size: 24px;
 }
 .search{
   background-color: white;
@@ -30,7 +52,7 @@
 }
 
 input::placeholder {
-  font-size: 14px;
+  font-size: 20px;
   color: #999;
 }
 .manage{
@@ -40,14 +62,34 @@ select{
   height: 50px;
 }
 .filtrbtn{
-  padding: 10px 40px;
+  padding: 12px 40px;
   border: 2px solid white;
-  background-color: #fafafa9d;
-  font-family: 16px;
-  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  border-radius: 12px;
+}
+.form-control:focus{
+  box-shadow: none !important;
+  border:1px solid #016635;
+}
+.form-select{
+  font-size: 20px;
+  color: #999;
+}
+.form-select:focus{
+  box-shadow: none !important;
+  border:1px solid #016635;
+}
+.form-select::selection{
+  box-shadow: none !important;
+  border:1px solid #016635;
+
 }
 .head{
   font-size: 32px;
+}
+.head1{
+  font-size: 44px;
 }
 .txt{
   font-size: 16px;
@@ -90,3 +132,66 @@ select{
 .output p {
   margin: 5px 0;
 }
+.custom-dropdown {
+  position: relative;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.dropdown-search {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.dropdown-options li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-options li:hover {
+  background-color: #f1f1f1;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+  font-size: 30px;
+}
+
+

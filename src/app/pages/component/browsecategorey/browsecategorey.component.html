@@ -1,0 +1,23 @@
+
+<div class="px-5">
+  <div class="text-end mt-1">
+   <button class="wpimg">
+    <!-- <img src="images/wp.png" alt="" height="40" width="40"> -->
+   </button>
+  </div>
+  <p class="poppins-medium head">Browse Category</p>
+  <nav>
+    <ul class="menu-bar d-flex list-unstyled">
+      <li *ngFor="let item of menuItems" class="me-3">
+        <a 
+          (click)="setActive(item.section)" 
+          class="poppins-medium text-decoration-none text" 
+          c   
+          [class.active]="activeSection === item.section"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

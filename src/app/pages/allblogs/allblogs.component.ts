@@ -1,34 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BlogsService } from '../../core/services/blogs.service';
+import { Blogs } from '../../core/models/blogs';
 
 @Component({
   selector: 'app-allblogs',
   templateUrl: './allblogs.component.html',
-  styleUrl: './allblogs.component.css'
+  styleUrls: ['./allblogs.component.css']
 })
-export class AllblogsComponent {
-  newsdata=[
+export class AllblogsComponent implements OnInit {
+  posts: Blogs[] = [];
+  isLoading = true;
+  errorMessage = '';
+
+  constructor(private blogsService: BlogsService) {}
+
+  ngOnInit(): void {
+    this.fetchBlogs();
+  }
+  newsdata = [
     {
-      title:'Petrol Price in Pakistan Increased by Rs.1.35/Liter',
-      name:'Andrew tate',
-      date:'04 Nov 2024'
-  },
-  ]
-  posts = [
-    {
-      title: 'Sazgar Engineering Sold 1,000+ Truck Last Month',
-      author: 'Omar Faruq',
-      date: 'Nov 6, 2024',
-      image: 'images/blog img.png',
-      summary: 'Pakistan is making significant strides towards a greener and more sustainable future...'
-    },
-    {
-      title: '2025 Kia Sportage Facelift Unveiled – Specs & Features',
-      author: 'Omar Faruq',
-      date: 'Nov 6, 2024',
-      image: 'images/blog img.png',
-      summary: 'Kia has officially unveiled the 2025 facelifted Kia Sportage in South Korea...'
-    },
-   
-    
+      title: 'Petrol Price in Pakistan Increased by Rs.1.35/Liter',
+      name: 'Andrew Tate',
+      date: '04 Nov 2024'
+    }
   ];
+
+  fetchBlogs(): void {
+    this.blogsService.getAllBlogs().subscribe({
+      next: (response) => {
+        if (response.success) {
+          this.posts = response.data;
+        } else {
+          this.errorMessage = 'No blogs available.';
+        }
+        this.isLoading = false;
+      },
+      error: () => {
+        this.errorMessage = 'Failed to load blogs';
+        this.isLoading = false;
+      }
+    });
+  }
 }

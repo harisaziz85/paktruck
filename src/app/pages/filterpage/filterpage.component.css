@@ -1,11 +1,26 @@
+.head{
+    font-size: 32px;
+    margin-top: 64px;
+
+}
 select{
-    background-color: #C2DACF;
+    background-color: #F2F7F5;
     border: 0px;
     padding: 10px 20px;
     border-radius: 10px;
 }
+.bgimg{
+    background-image: url('../../../../public//images/bg1.png');
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main1{
+    padding: 44px 44px 44px 44px;
+}
 select:focus{
-    background-color: #C2DACF;
+    background-color:#F2F7F5;
     border: 0px;
     padding: 10px 20px;
     border-radius: 10px;
@@ -22,6 +37,7 @@ span{
 }
 .card-img-top{
     height: 200px;
+    border-radius: 12px;
 }
 button{
     border: 0px ;
@@ -31,9 +47,26 @@ button{
 .bottombtn{
     position: absolute;
     bottom: 10px;
+    right: 130px;
+    background-color:  rgba(1, 102, 53, 0.08);
+    color: rgba(1, 102, 53, 1) ;
+
+}
+.bottombtn1{
+    
+    position: absolute;
+    bottom: 10px;
     right: 10px;
-    background-color: #FA610E;
+    background-color: rgba(1, 102, 53, 1);
     color: white;
+
+}
+.bottombtn2{
+    position: absolute;
+    bottom: 10px;
+    right: 285px;
+    background-color: rgba(1, 102, 53, 0.08);
+    color: rgba(1, 102, 53, 1);
 }
 .card-title{
     font-size: 20px;
@@ -44,7 +77,18 @@ button{
 }
 .d-flex{
     font-size: 16px;
+    padding-left: 18px;
+    padding-right: 18px;
+
 }
-.sixclass{
+.sixcls{
     font-size: 16px;
+}
+.detail{
+   margin-right: 10px;
+}
+.btn{
+    background-color: #016635;
+    color: white;
+    width: 150px;
 }

@@ -1,36 +1,61 @@
 <div class="main container-fluid px-5">
-    <div class="px-5 bg-white my-5">
-        <app-profile></app-profile>
-<app-menubar></app-menubar>
-<div class="row w-100">
-    <div class="col-md-9 mb-4" *ngFor="let item of myads">
-      <div class="card p-2">
-        <div class="row">
+  <div class="px-5 bg-white my-5">
+    <app-profile></app-profile>
+    <app-menubar></app-menubar>
+    <!-- <br>
+    <br>
+    <br>
+    <br>
+    <div *ngIf="ads.length > 0; else noAds">
+      <div *ngFor="let ad of ads" class="ad-card">
+        <img *ngIf="ad.images.length > 0" [src]="ad.images[0]" alt="Ad Image" class="ad-image" />
+        <h3>{{ ad.make }} - {{ ad.subCategory }}</h3>
+        <p>Price: {{ ad.price | currency }}</p>
+        <p>Location: {{ ad.location }}</p>
+        <p>Category: {{ ad.category }}</p>
+        <p>SubCategory: {{ ad.subCategory }}</p>
+        <p>Year: {{ ad.modelYear }}</p>
+        <p>{{ ad.description }}</p>
+
+        Favorite Button -->
+        <!-- <button (click)="toggleFavorite(ad._id)">Toggle Favorite</button>
+      </div>
+    </div>
+
+    <ng-template #noAds>
+      <p>No ads available.</p>
+    </ng-template>  -->
+
+    <div class="row w-100">
+      <div class="col-md-9 mb-4" *ngFor="let ad of ads">
+        <div class="card p-2">
+          <div class="row">
             <div class="col-4">
-        <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+              <img *ngIf="ad.images.length > 0" [src]="ad.images[0]" class="card-img-top" >
 
             </div>
             <div class="col-4 align-items-center">
-                <h5 class="card-title poppins-medium text-muted">{{ item.name }}</h5>
-          <p class="card-text poppins-medium">{{ item.price }}</p>
-          <ul class=" mb-2 d-flex gap-4 poppins-medium">
-            <li *ngFor="let detail of item.details" class=" poppins-medium sixcls">{{ detail }}</li>
-          </ul>
-          <p class="poppins-medium  sixcls"><i class="fa-solid fa-location-dot me-2"></i>{{ item.location }}</p>
-          <p class="poppins-regular sixcls">{{ item.lastupdate }}</p>
+              <h5 class="card-title poppins-medium text-muted">{{ ad.category }}</h5>
+              <p class="card-text poppins-medium">{{ ad.price | currency }}</p>
+              <ul class=" mb-2 d-flex gap-4 poppins-medium">
+                <li  class=" poppins-medium sixcls">{{ ad.description }}</li>
+              </ul>
+              <p class="poppins-medium  sixcls"><i class="fa-solid fa-location-dot me-2"></i>{{ ad.location }}</p>
+              <!-- <p class="poppins-regular sixcls">{{ item.lastupdate }}</p> -->
 
             </div>
             <div class="col-4 text-end ">
-                <div><button class="viewbtn poppins-regular">{{ item.viewbtn }}<i class="fa-solid fa-arrow-right ms-3"></i></button></div>
-                <div ><button  class="bottombtn poppins-regular"><i class="fa-solid fa-phone-volume"></i>
+              <!-- <div><button class="viewbtn poppins-regular">{{ ad.viewbtn }}<i -->
+                    <!-- class="fa-solid fa-arrow-right ms-3"></i></button></div> -->
+              <div><button class="bottombtn poppins-regular"><i class="fa-solid fa-phone-volume"></i>
 
-                  {{ item.submitbtn}}</button></div>
+                  Call</button></div>
 
             </div>
+          </div>
+
         </div>
-          
       </div>
     </div>
   </div>
-    </div>
 </div>

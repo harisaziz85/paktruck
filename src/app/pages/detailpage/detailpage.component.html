@@ -1,50 +1,49 @@
-<div class="container-fluid px-5">
-<div class=" d-flex addiv align-items-center justify-content-center  text-center my-4 rounded-4">
-    <p class="ads poppins-medium"> For Ads</p>
-</div>
-</div>
-<div class="container-fluid px-5">
-    <p>MJJC Pressure Washer Foam</p>
-    <div>
-        <div class="container my-4">
-            <h2 class="text-center mb-4">Pressure Washers</h2>
-          
-            <!-- Top Section: Gas and Electric Washers -->
-            <div class="row">
-              <div
-                class="col-md-12 mb-4"
-                *ngFor="let washer of washers"
-              >
-                <div class="card h-100">
-                  <img
-                    [src]="washer.image"
-                    class="card-img-top"
-                    alt="Washer Image"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">{{ washer.type }} Pressure Washer</h5>
-                    <p class="card-text">{{ washer.description }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Bottom Section: Parts -->
-            <div class="row mt-4">
-              <div
-                class="col-md-3"
-                *ngFor="let part of parts"
-              >
-                <div class="card">
-                  <img
-                    [src]="part.image"
-                    class="card-img-top"
-                    alt="Part Image"
-                  />
-                </div>
-              </div>
-            </div>
+
+
+
+<div class="container-fluid px-5 mt-4">
+  <div class="row">
+      
+      <div class=" col-md-7"  *ngIf="adDetails">
+      <img [src]="adDetails.images[0]" alt="{{ adDetails.make }}" width="100%" height="100%">
+
+
+
+    </div>
+    <div class="col-md-5 firrow">
+      <p class="poppins-medium text-muted name"></p>
+      <p class="poppins-regular txt">{{ adDetails.category }}</p>
+      <p class="price poppins-semibold">{{ adDetails.price }}</p>
+      <p class="location poppins-regular">{{ adDetails.location }}</p>
+      <p class="txt poppins-semibold">About This Item</p>
+      <p class="poppins-regular txt1">{{ adDetails.make }}</p>
+      <p class="poppins-regular txt1">{{ adDetails.modelYear }}</p>
+      <div class="d-flex  justify-content-between p-3 align-items-center"
+        style="background-color: #E6E6E6;border-radius:12px;">
+        <div class="d-flex">
+          <div><svg width="70" height="70" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle cx="24" cy="24.5" r="23.5" fill="white" stroke="#E6E6E6" />
+              <rect x="7.57812" y="7.44629" width="31.5789" height="31.5789" fill="url(#pattern0_1091_4059)" />
+              <defs>
+                <pattern id="pattern0_1091_4059" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_1091_4059" transform="scale(0.02)" />
+                </pattern>
+                <image id="image0_1091_4059" width="50" height="50"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABHZJREFUaEPtmV1oHFUUx/9nZiNbVIipH6WKiF9YUUERBat5qj6oaAUjtRDiZuZOPhQ0qA9ihSDaBx+kD5pk90zWtdGKrp80+CDtg8SKCn1Q0BYVKZIoiqYTGhPJ7s41A1sJ283u7JnbKKHzOvf8z/835849c+8Q1slF64QDZ0CaVbK/v/+ySqVyB4DNRLRJax0C+MOyrK9mZ2enisXiUjONVu4brcjw8LA1PT3dQ0RPAbi2gZGfATzKzJOtmG001hhIJpO5IJVKRcZuiWmuDODdMAz3jY+P748Zs+owIyADAwPnlcvlTwFcLzT0caVS2ZHP508I48287Eqp1wA8IjVRjfuImbdLNRJXpPpS/wjAlpo4GWdZ1rZsNntQopMYxHXdp4noJUnyOjFvMfNOiVZiEKXUhwDulySvEzPDzJdItEyAfJPgJa/1rIMgSEt6jAmQb5v0jJYecCqV6hgdHT3eUhCQfNVSSpmsCNra2s4dGRmZ/y9ADgO4qdXEq4w/zswdEi0TU+ttAA9JkteJObz82XKzRCsxiOd5z2mtn5ckr40hojdyuVy3RMsEyHat9QeS5KcsWVr3+b6fk2iZANmptX5TkrwOSI/v+3slWolBlFKHANwmSV4n5hAz3y7RMgFyBMA1kuR1Yo4wc6N9zKppTIC8D+ABQyDvMfODEq3EIK7rZogoL0leJybDzAWJVmIQz/PawjA8QESdEgMrYqaCINgm+c6KNBKDRCJdXV1ntbe3R/vwi4QwvwVBcKkUwhhIJOS6boGIeiQgWuvXfd9PtMM0UpHIvOM4W5d3eJ8JQTp935+SxJ6MMQYSCSqlolOUe1o0dICZ72wx5pThRkF6e3s327b9NYDzYxo7Ydv2DWNjY8dijj99faRWWSn1BYBbYxo7ysxbYo5tOMxoRarTq5X9yf8XxHXdESIaiPmUX2bmJ2OOXduKDA0NbZifn486/Y4mBvcGQaCS9I6V+samluM411mWdSMzT0QJ+vr6OsMw9ABsBbCpmvRXANESPcbMn1f7T8a27S+z2ex3SSqTGMRxnCtt235Ca90HIEVEry4tLe0qFApBI2OO43QQ0QvVaVgCkCeiPblc7qgESAQS/T6YmZm5e/l/x2MAoh5grUyutf5z+YjoHQCTtm3/sLCw8Et0P51OXwzgagD3Rl82AGoPGjSAg1rrV+bm5iaLxWIlLlRLIIODg+eUSqX+6ClqrS+Pm0Q47hgRjZbL5dE4p/RxQcjzPEdr/SKAC4XGpGG/A9i1fJTqA4gqVvdqCtLd3X12Op3eB+A+qRMTcUS0f3Fx8eGJiYm/6uk1BKkupZ8AEO2jTQDUaEyVSqW7CoXC37XaDUGUUnsAPH4aDCWRrNtEVwXxPO8KrfX3tStSEgeGYsNKpXJVPp//KVZDVErtBvCMoeRGZYhody6XezYuiMnzKqMg0dcBM0f/8P+9Vp1aSqmoqYlOxk27rqM3y8wbm4JUV6uFNTAkTlEqlTasXL2a9hFxpjUOPAOyxg+8abp1U5F/AP3efULOMs9UAAAAAElFTkSuQmCC" />
+              </defs>
+            </svg>
           </div>
-          
+          <div>
+            <p class="poppins-medium">PakTruck</p>
+            <p class="poppins-medium text-muted">PakTruck Managed</p>
+          </div>
+        </div>
+        <div>
+          <p class="poppins-medium"><a routerLink="/profile/myads" class="text-decoration-none txt2 ">View Profile</a><i
+              class="fa-solid fa-greater-than ms-2" style="color:  #016635;"></i></p>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
+</div>

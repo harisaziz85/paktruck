@@ -1,21 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ShopsService } from '../../core/services/shops.service';
 
 @Component({
   selector: 'app-shops',
   templateUrl: './shops.component.html',
-  styleUrl: './shops.component.css'
+  styleUrls: ['./shops.component.css']
 })
-export class ShopsComponent {
-  bodyParts = [
-    { name: 'Damper', price: 'PKR 7,500,000', image: 'images/spare.png' },
-    { name: 'Wooden', price: 'PKR 7,500,000', image: 'images/spare2.png' },
-    { name: 'Flatbed', price: 'PKR 7,500,000', image: 'images/spare3.png' },
-    { name: 'Tanker', price: 'PKR 7,500,000', image: 'images/spare4.png' },
-  ];
-  usedtrucks = [
-    { name: 'Damper', location: 'lahore', image: 'images/spare.png' },
-    { name: 'Wooden', location: 'lahore', image: 'images/spare2.png' },
-    { name: 'Flatbed', location: 'lahore', image: 'images/spare3.png' },
-    { name: 'Tanker', location: 'lahore', image: 'images/spare4.png' },
-  ];
+export class ShopsComponent implements OnInit {
+  shops: any[] = [];
+
+  constructor(private shopsService: ShopsService) {}
+
+  ngOnInit(): void {
+    this.fetchShops();
+  }
+
+  fetchShops() {
+    this.shopsService.getShops().subscribe((response: any) => {
+      if (response.status === 'success') {
+        this.shops = response.data;
+      }
+    });
+  }
 }

@@ -1,7 +1,44 @@
 .addiv{
-    background-color: #CFD4D8;
-    height: 50vh;
+    /* background-image: url('../../../../public/images/bg2.png'); */
+    height: 80vh;
+   
 }
-.ads{
-    font-size: 100px;
+.name{
+    font-size: 32px;
+}
+.txt{
+    font-size: 24px;
+}
+.price{
+    font-size: 32px;
+    color: #016635;
+}
+.location{
+    font-size: 16px;
+}
+.txt1{
+    font-size: 20px;
+}
+/* .firrow{
+    border-right:1px solid grey ;
+} */
+.txt2{
+    font-size: 16px;
+    color: #016635;
+}
+.txt3{
+    font-size: 18px;
+}
+.btn1{
+    background-color: #FA610E;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 0px;
+}
+.img1{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 150px;
 }

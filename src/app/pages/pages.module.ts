@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -38,6 +39,39 @@ import { BlogdetailspageComponent } from './blogdetailspage/blogdetailspage.comp
 import { CommentsComponent } from './component/comments/comments.component';
 import { FilterpageComponent } from './filterpage/filterpage.component';
 import { FiltercomponentComponent } from './component/filtercomponent/filtercomponent.component';
+import { BrowsecategoreyComponent } from './component/browsecategorey/browsecategorey.component';
+import { UsedbussesforsaleComponent } from './component/usedbussesforsale/usedbussesforsale.component';
+import { PaktruckvideosComponent } from './component/paktruckvideos/paktruckvideos.component';
+import { BlogsnewsComponent } from './component/blogsnews/blogsnews.component';
+import { TestingComponent } from './testing/testing.component';
+import { AgricultureMachineryComponent } from './agriculture-machinery/agriculture-machinery.component';
+import { AgriculturemachineryComponent } from './component/agriculturemachinery/agriculturemachinery.component';
+import { CargolandingtruckComponent } from './component/cargolandingtruck/cargolandingtruck.component';
+import { DumpertruckComponent } from './component/dumpertruck/dumpertruck.component';
+import { FlattruckComponent } from './component/flattruck/flattruck.component';
+import { TrailertruckComponent } from './component/trailertruck/trailertruck.component';
+import { TankertruckComponent } from './component/tankertruck/tankertruck.component';
+import { ContainercarriertruckComponent } from './component/containercarriertruck/containercarriertruck.component';
+import { FreezertruckComponent } from './component/freezertruck/freezertruck.component';
+import { BoxtruckComponent } from './component/boxtruck/boxtruck.component';
+import { DumptruckComponent } from './component/dumptruck/dumptruck.component';
+import { ExcavatoroperatorComponent } from './component/excavatoroperator/excavatoroperator.component';
+import { LoaderoperatorComponent } from './component/loaderoperator/loaderoperator.component';
+import { RollermachineComponent } from './component/rollermachine/rollermachine.component';
+import { GradermachineComponent } from './component/gradermachine/gradermachine.component';
+import { CranemachineComponent } from './component/cranemachine/cranemachine.component';
+import { WheeltractoeComponent } from './component/wheeltractoe/wheeltractoe.component';
+import { RoadcutterComponent } from './component/roadcutter/roadcutter.component';
+import { DrillingmachineComponent } from './component/drillingmachine/drillingmachine.component';
+import { TractormachineComponent } from './component/tractormachine/tractormachine.component';
+import { ForlliftoperatorComponent } from './component/forlliftoperator/forlliftoperator.component';
+import { TractorsComponent } from './component/tractors/tractors.component';
+import { ThreshersComponent } from './component/threshers/threshers.component';
+import { HarvestersComponent } from './component/harvesters/harvesters.component';
+import { SeedersComponent } from './component/seeders/seeders.component';
+import { PlowsComponent } from './component/plows/plows.component';
+import { CompactormachineComponent } from './component/compactormachine/compactormachine.component';
+// import { SparepartsComponent } from './spareparts/spareparts.component';
 
 @NgModule({
   declarations: [
@@ -76,11 +110,46 @@ import { FiltercomponentComponent } from './component/filtercomponent/filtercomp
     CommentsComponent,
     FilterpageComponent,
     FiltercomponentComponent,
+    BrowsecategoreyComponent,
+    UsedbussesforsaleComponent,
+    PaktruckvideosComponent,
+    BlogsnewsComponent,
+    TestingComponent,
+    AgricultureMachineryComponent,
+    AgriculturemachineryComponent,
+    CargolandingtruckComponent,
+    DumpertruckComponent,
+    FlattruckComponent,
+    TrailertruckComponent,
+    TankertruckComponent,
+    ContainercarriertruckComponent,
+    FreezertruckComponent,
+    BoxtruckComponent,
+    DumptruckComponent,
+    ExcavatoroperatorComponent,
+    LoaderoperatorComponent,
+    RollermachineComponent,
+    GradermachineComponent,
+    CranemachineComponent,
+    WheeltractoeComponent,
+    RoadcutterComponent,
+    DrillingmachineComponent,
+    TractormachineComponent,
+    ForlliftoperatorComponent,
+    TractorsComponent,
+    ThreshersComponent,
+    HarvestersComponent,
+    SeedersComponent,
+    PlowsComponent,
+    CompactormachineComponent,
+    // SparepartsComponent,
+    
   ],
   imports: [
     CommonModule,
     FormsModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    CarouselModule
   ]
 })
 export class PagesModule { }

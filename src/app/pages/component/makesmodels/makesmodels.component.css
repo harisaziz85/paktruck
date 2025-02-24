@@ -11,6 +11,14 @@
     margin-bottom: 20px; 
     line-height: 30px;
   }
+  a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .txt{
+    font-size: 20px;
+    line-height: 30px;
+  }
   .head{
     font-size: 32px;
   }

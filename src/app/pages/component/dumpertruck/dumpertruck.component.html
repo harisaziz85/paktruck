@@ -1,0 +1,20 @@
+<div class="main container-fluid px-5 py-5">
+  <p class="head poppins-semibold">Dumper Trucks</p>
+
+  <div class="row" *ngIf="dumperTrucks.length > 0; else noTrucks">
+    <div class="col-md-3 mb-4" *ngFor="let item of dumperTrucks">
+      <div class="card h-100">
+        <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+        <div class="card-body">
+          <h5 class="card-title poppins-medium">{{ item.subCategory }}</h5>
+          <p class="card-text poppins-medium">{{ item.location }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error message when no trucks are available -->
+  <ng-template #noTrucks>
+    <p class="poppins-medium">No Dump Trucks available at the moment.</p>
+  </ng-template>
+</div>

@@ -1,6 +1,6 @@
 .head{
     font-size: 18px;
-    line-height: 30px;
+    line-height: 50px;
 }
 .top{
     font-size: 20px;
@@ -18,4 +18,26 @@
 }
 .form-check-input:checked{
     background-color: #016635;
+}
+.form-check-input:focus{
+box-shadow: none;
+}
+input{
+    background-color: #F2F7F5;
+    border: 1px solid #C2DACF;
+}
+::placeholder{
+    font-weight: 500;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+.btn1{
+    background-color: #016635;
+    border: 0px;
+    border-radius: 0px 8px 8px 0px;
+    color: white;
+    padding-left:10px ;
+    padding-right:10px ;
+
 }

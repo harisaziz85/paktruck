@@ -1,13 +1,14 @@
-<div class="container-fluid ">
-  <div class="row  py-3 bg-white px-4  ">
-    <div class="d-flex justify-content-between py-4">
+<div class="container-fluid bg-white manage">
+  <div class="row   ">
+    <div class="d-flex justify-content-between align-items-center">
       <p class="poppins-medium head">Truck & Machinery Used Parts</p>
-      <p class="poppins-medium txt">View all Spare Parts</p>
+      <p class="poppins-medium txt"><a routerLink="/spare-parts" class="text-decoration-none">View all Spare Parts</a></p>
     </div>
     <div class="col-md-3 mb-4" *ngFor="let column of data">
       <div class="list-item poppins-medium" *ngFor="let item of column">
+        <a routerLink="filterpage" class="text-decoration-none clr">
         <span class="dot"></span>
-        {{ item }}
+        {{ item }}</a>
       </div>
     </div>
   </div>

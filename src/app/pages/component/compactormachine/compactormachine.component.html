@@ -1,0 +1,15 @@
+<div class="main container-fluid px-5 py-5">
+  <p class="cathead poppins-medium">Compactor Machine</p>
+  <!-- <p class="cathead poppins-medium">Used Truck</p> -->
+  <div class="row">
+    <div class="col-md-3 mb-4" *ngFor="let item of usedtrucks">
+      <div class="card h-100">
+        <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+        <div class="card-body">
+          <h5 class="card-title poppins-medium">{{ item.name }}</h5>
+          <p class="card-text poppins-medium">{{ item.location }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

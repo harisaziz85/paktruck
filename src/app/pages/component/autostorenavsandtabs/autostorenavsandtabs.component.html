@@ -1,5 +1,5 @@
-<div class="container-fluid py-5 main">
-  <div class="px-4">
+<div class="container-fluid  main" id="spareparts">
+  <div class="">
   <p class="poppins-medium head">Auto store, factories & showroom</p>
   <!-- Navigation -->
   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -59,15 +59,17 @@
       <div class="row">
         <div class="col custom-col mb-3" *ngFor="let store of autoStores">
           <div class="card">
+          <a routerLink="filterpage" class="text-decoration-none">
+            
             <img
               src="{{ store.image }}"
-              class="card-img-top"
+              class="card-img-top p-1"
               alt="{{ store.title }}"
             />
-            <div class="card-body">
+            <div class="card-body text-dark">
               <h5 class="card-title poppins-medium">{{ store.title }}</h5>
               <p class="card-text"> <i class="fas fa-map-marker-alt"></i> {{ store.location }}</p>
-            </div>
+            </div></a>
           </div>
         </div>
       </div>
@@ -82,16 +84,20 @@
     >
       <div class="row">
         <div class="col custom-col mb-3" *ngFor="let factory of factories">
+  
+
           <div class="card">
+          <a routerLink="/filterpage" class="text-decoration-none">
+
             <img
               src="{{ factory.image }}"
-              class="card-img-top"
+              class="card-img-top p-1"
               alt="{{ factory.title }}"
             />
-            <div class="card-body">
+            <div class="card-body text-dark">
               <h5 class="card-title poppins-medium">{{ factory.title }}</h5>
               <p class="card-text"> <i class="fas fa-map-marker-alt"></i> {{ factory.location }}</p>
-            </div>
+            </div></a>
           </div>
         </div>
       </div>
@@ -106,16 +112,19 @@
     >
       <div class="row">
         <div class="col custom-col mb-3" *ngFor="let showroom of showrooms">
+
           <div class="card">
+          <a routerLink="/filterpage" class="text-decoration-none">
+
             <img
               src="{{ showroom.image }}"
-              class="card-img-top"
+              class="card-img-top p-1"
               alt="{{ showroom.title }}"
             />
-            <div class="card-body">
+            <div class="card-body text-dark">
               <h5 class="card-title poppins-medium">{{ showroom.title }}</h5>
               <p class="card-text"> <i class="fas fa-map-marker-alt"></i> {{ showroom.location }}</p>
-            </div>
+            </div></a>
           </div>
         </div>
       </div>

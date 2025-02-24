@@ -1,13 +1,28 @@
-<div class="container-fluid px-4 pt-4 ">
-    <div class="d-flex gap-4">
-        <div>
-    <img src="images/profile.png" alt="">
-        </div>
-        <div>
-            <p class="poppins-medium name">Inayat Mirza <span class="ms-3 vari"><img src="images/shield-security.png" alt="">Unvarified</span></p>
-            <p class="poppins-medium info">Member Since Nov 12, 2024</p>
-            <p class="poppins-medium info"><span class="spn1 me-2 pe-3">Edit Profile</span> <span class="spn2 ps-3">
-                Get Verified   <i class="fas fa-greater-than"></i></span></p>
-        </div>
+<div class="row">
+  <div class="col-6 p-4">
+    <div class="d-flex">
+<img src="images/profile.png"  alt="">
+<div class=" ms-2">
+  <div class="d-flex">
+    <p class="head poppins-medium">{{ user?.fullname }}</p>
+    <div class="d-flex ms-3">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.74375 1.85879L4.58542 3.42546C3.62708 3.78379 2.84375 4.91712 2.84375 5.93379V12.1255C2.84375 13.1088 3.49375 14.4005 4.28542 14.9921L7.86875 17.6671C9.04375 18.5505 10.9771 18.5505 12.1521 17.6671L15.7354 14.9921C16.5271 14.4005 17.1771 13.1088 17.1771 12.1255V5.93379C17.1771 4.90879 16.3938 3.77546 15.4354 3.41712L11.2771 1.85879C10.5687 1.60046 9.43542 1.60046 8.74375 1.85879Z" stroke="#4D4D4D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.0026 10.4163C10.9231 10.4163 11.6693 9.67015 11.6693 8.74967C11.6693 7.8292 10.9231 7.08301 10.0026 7.08301C9.08213 7.08301 8.33594 7.8292 8.33594 8.74967C8.33594 9.67015 9.08213 10.4163 10.0026 10.4163Z" stroke="#4D4D4D" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 10.417V12.917" stroke="#4D4D4D" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="p1 poppins-medium">Unverified</p></div>
+  </div>
+  <p class="poppins-medium p1">Member Since Nov 12, 2024</p>
+  <a href="/profile/editprofile" class="p1 poppins-medium p2 me-3">Edit Profile</a>
+  <a [routerLink]="verificationLink" class="p1 poppins-medium p3">Get Verified
+    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.42188 14.6004L6.85521 9.16706C7.49688 8.52539 7.49688 7.47539 6.85521 6.83372L1.42188 1.40039" stroke="#016635" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  
+</div>
     </div>
+  </div>
+  <div class="col-6"></div>
 </div>

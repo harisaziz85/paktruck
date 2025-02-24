@@ -1,31 +1,38 @@
 <div class="container-fluid px-5 main ">
 <div class="row pt-5">
-    <div class="col-md-6">
-        <p class="head poppins-medium">Contact Us</p>
-        <form>
-            <div class="form-group">
-              <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter your Name">
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter your email Address">
+    <div class="container-fluid px-5 main">
+        <div class="row pt-5">
+          <div class="col-md-6">
+            <p class="head poppins-medium">Contact Us</p>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="contactForm.fullname" name="fullname" placeholder="Enter your Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Mobile Number">
+                <input type="email" class="form-control" [(ngModel)]="contactForm.email" name="email" placeholder="Enter your Email Address" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Manage Subject">
+                <input type="text" class="form-control" [(ngModel)]="contactForm.mobileNumber" name="mobileNumber" placeholder="Enter Mobile Number" required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter you Message Here" rows="6"></textarea>
-                <small>Only 320 Characters</small>
+                <input type="text" class="form-control" [(ngModel)]="contactForm.subject" name="subject" placeholder="Manage Subject" required>
               </div>
-           
-            <button type="submit" class="btn ">Submit</button>
-          </form>
-    </div>
-    <div class="col-md-6">
-        <img src="images/contactimage.png" class="img-fluid" alt="">
-    </div>
+              <div class="form-group">
+                <textarea class="form-control" [(ngModel)]="contactForm.message" name="message" placeholder="Enter your Message Here" rows="6" required></textarea>
+                <p class="poppins-regular">Only 320 Characters</p>
+              </div>
+              <button type="submit" class="btn" [disabled]="isLoading">
+                {{ isLoading ? 'Sending...' : 'Submit' }}
+              </button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <img src="images/contactimage.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+      
+    
 </div>
 <div>
 <p class="head poppins-medium mt-5">Address</p>
@@ -39,7 +46,7 @@
 <p class="head poppins-medium mt-5">About:</p>
 <p class="txt poppins-regular">Lorem ipsum dolor sit amet consectetur. Ornare ut felis diam urna nam. Quam urna amet diam facilisi eget vestibulum malesuada nulla. In mattis turpis ac a. Gravida pharetra eu urna nec sagittis mauris. Pellentesque interdum quis amet venenatis pharetra augue dictumst magna ut. Dolor amet augue laoreet potenti elit a enim augue est. Amet semper eleifend elementum non potenti. Nisi lacus ut molestie gravida tellus. </p>
 <p class="head poppins-medium mt-5">Links</p>
-<div>
+<div class="d-flex gap-5 mt-3">
     <div class="d-flex py-2">
         <div><img src="images/fb.png" alt=""></div>
         <div class="ms-3"> 

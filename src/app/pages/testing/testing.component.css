@@ -1,0 +1,97 @@
+.manage{
+    background-color: #0166351a;
+    padding-top: 44px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 44px;
+  }
+  .head{
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+  .txt{
+      font-size: 16px;
+      background-color: rgba(1, 102, 53, 0.05);
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+  
+    }
+    
+   
+    .fea{
+      background-color: rgba(1, 102, 53, 0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 10px 0px 90px 0px;
+      color: white;
+      font-size: 16px;
+    }
+    .card-title{
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .card-text{
+      font-size: 20px;
+      color: #016635;
+    }
+    a{
+      text-decoration: none;
+    }
+    .card-text1{
+      font-size: 20px;
+      line-height: 8px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    img{
+      border-radius: 12px;
+    }
+    .scroll-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .scroll-container {
+      overflow-x: hidden;
+      white-space: nowrap;
+      scroll-behavior: smooth; /* Smooth scrolling */
+      width: 100%;
+    }
+    
+    .scroll-container .row {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    
+    .scroll-container .col-md-3 {
+      flex: 0 0 auto;
+      width: 25%; /* Adjust the width as needed */
+    }
+    
+    .scroll-arrow {
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 100%;
+      color: rgba(51, 161, 55, 1);
+      font-size: 25px;
+      cursor: pointer;
+      padding: 5px 17px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    
+    .left-arrow {
+      left: -50px;
+    }
+    
+    .right-arrow {
+      right: -50px;
+    }
+    
+    .scroll-arrow:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }

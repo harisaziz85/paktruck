@@ -1,60 +1,64 @@
-<div class="container-fluid px-5">
-    <div class="row my-3">
-        <div class="col-md-4"><app-sidebar /></div>
-        <div class="col-md-8">
-            <div class="card py-3 px-4">
-                <div class="d-flex gap-3 align-items-center po">
-                    <span class="poppins-medium">Sort by: </span><select name="" id="" class="w-50 poppins-medium">
-                        <option value="" class="poppins-medium">Update Date: Recent First</option>
-                        <option value="" class="poppins-medium">Update Date: Oldest First</option>
-                        <option value="" class="poppins-medium">Price: Low to High</option>
-                        <option value="" class="poppins-medium">Price: High to Low </option>
-                        <option value="" class="poppins-medium">Model Year: Latest First</option>
-                        <option value="" class="poppins-medium">Mileage: Low to High</option>
-                        <option value="" class="poppins-medium">Mileage: High to Low </option>
-
-
-                    </select>
-                </div>
-            </div>
-
-
-
-
-
-
-            <div class="row  p-0">
-                <div class="col-md-12 my-4 mb-4" *ngFor="let item of myads">
-                  <div class="card p-2">
-                    <div class="row">
-                        <div class="col-4">
-                    <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
-            
-                        </div>
-                        <div class="col-4 align-items-center">
-                            <h5 class="card-title poppins-medium text-muted">{{ item.name }}</h5>
-                      <p class="card-text poppins-medium">{{ item.price }}</p>
-                      <ul class=" mb-2 d-flex gap-4 poppins-medium">
-                        <li *ngFor="let detail of item.details" class=" poppins-medium sixcls">{{ detail }}</li>
-                      </ul>
-                      <p class="poppins-medium  sixcls"><i class="fa-solid fa-location-dot me-2"></i>{{ item.location }}</p>
-                      <p class="poppins-regular sixcls">{{ item.lastupdate }}</p>
-            
-                        </div>
-                        <div class="col-4 text-end ">
-                            <div ><button  class="bottombtn poppins-regular"><i class="fa-solid fa-phone-volume"></i>
-                              {{ item.submitbtn}}</button></div>
-            
-                        </div>
-                    </div>
-                      
-                  </div>
-                </div>
-              </div>
-        </div>
+<div class="container-fluid main1">
+  <div class="container-fluid p-0">
+    <div class="d-flex addiv align-items-center justify-content-center text-center my-4 rounded-4 bgimg"></div>
+  </div>
+  <p class="head poppins-medium">Used Truck for sale in Pakistan</p>
+  <div class="row my-3">
+    <div class="col-md-3">
+      <app-sidebar [filters]="filters" (filtersChanged)="applyFilters($event)"></app-sidebar>
 
     </div>
-    <app-paktruckmanage></app-paktruckmanage>
-    <app-filtercomponent></app-filtercomponent>
-
+    <div class="col-md-9 ">
+        <div class="card py-3 mb-4 ">
+          <div class="d-flex gap-3 align-items-center ">
+            <span class="poppins-medium">Sort by: </span>
+            <select name="sort" id="sort" class="w-50 poppins-medium" (change)="onSortChange($event)">
+              <option value="Update Date: Recent First">Update Date: Recent First</option>
+              <option value="Update Date: Oldest First">Update Date: Oldest First</option>
+              <option value="Price: Low to High">Price: Low to High</option>
+              <option value="Price: High to Low">Price: High to Low</option>
+              <option value="Model Year: Latest First">Model Year: Latest First</option>
+              <!-- <option value="Mileage: Low to High">Mileage: Low to High</option> -->
+              <!-- <option value="Mileage: High to Low">Mileage: High to Low</option> -->
+            </select>
+            
+        </div>
+      </div>
+      <div class="row p-0">
+        <div class="col-md-12 my-2" *ngFor="let ad of filteredAds | slice:(currentPage - 1) * pageSize:(currentPage * pageSize)">
+          <div class="card p-1">
+            <div class="row">
+              <div class="col-4">
+                <img [src]="ad.images[0]" class="card-img-top" alt="{{ ad.make }} {{ ad.modelYear }}" />
+              </div>
+              <div class="col-4 align-items-center">
+                <h5 class="card-title poppins-medium text-muted">{{ ad.make }}</h5>
+                <p class="card-text poppins-medium">{{ ad.price }} </p>
+                <ul class="mb-2 d-flex gap-4 poppins-medium">
+                  <li class="poppins-medium sixcls detail">{{ ad.description }}</li>
+                </ul>
+                <p class="poppins-medium sixcls"><i class="fa-solid fa-location-dot me-2"></i>{{ ad.location }}</p>
+                <p class="poppins-regular sixcls">{{ ad?.createdAt | date:'dd/MM/yyyy, h:mm a' }}</p>
+              </div>
+              <div class="col-4 text-end">
+                <div>
+                  <button class="bottombtn2"><i class="fa-brands fa-rocketchat"></i> Chat</button>
+                  <button class="bottombtn"><img src="images/wp.png" height="20" width="20" alt=""> Whatsapp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pagination Buttons -->
+      <div class="d-flex justify-content-center mt-3">
+        <button class="btn poppins-medium me-2" (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        <button class="btn poppins-medium" (click)="nextPage()" [disabled]="currentPage * pageSize >= filteredAds.length">Next</button>
+      </div>
+      
+    </div>
+  </div>
+  <!-- <app-paktruckmanage></app-paktruckmanage> -->
+  <app-filtercomponent></app-filtercomponent>
 </div>

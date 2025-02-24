@@ -1,0 +1,20 @@
+<div class="main container-fluid px-5 py-5">
+  <p class="head poppins-semibold">Flat Bed Truck</p>
+
+  <div class="row" *ngIf="flatBedTrucks.length > 0; else noTrucks">
+    <div class="col-md-3 mb-4" *ngFor="let item of flatBedTrucks">
+      <div class="card h-100">
+        <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+        <div class="card-body">
+          <!-- <h5 class="card-title poppins-medium">{{ item.name }}</h5> -->
+          <p class="card-text poppins-medium"> {{ item.subCategory }}</p>
+          <p class="card-text poppins-medium">{{ item.location }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noTrucks>
+    <p class="text-center poppins-medium">No Flat Bed Trucks available.</p>
+  </ng-template>
+</div>

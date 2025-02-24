@@ -2,7 +2,7 @@
     <p class="head poppins-semibold"> PakTruck Shops
     </p>
     <p class="cathead poppins-medium">Spare Parts</p>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-3 mb-4" *ngFor="let item of bodyParts">
           <div class="card h-100">
             <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
@@ -12,17 +12,18 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <p class="cathead poppins-medium">Used Truck</p>
       <div class="row">
-        <div class="col-md-3 mb-4" *ngFor="let item of usedtrucks">
+        <div class="col-md-3 mb-4" *ngFor="let shop of shops">
           <div class="card h-100">
-            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <img [src]="shop.profileImage || 'assets/default-image.jpg'" class="card-img-top" alt="{{ shop.fullname || 'Shop' }}">
             <div class="card-body">
-              <h5 class="card-title poppins-medium">{{ item.name }}</h5>
-              <p class="card-text poppins-medium">{{ item.location}}</p>
+              <h5 class="card-title poppins-medium">{{ shop.fullname || 'Unnamed Shop' }}</h5>
+              <p class="card-text poppins-medium">{{ shop.shopCategory || 'No Category' }}</p>
             </div>
           </div>
         </div>
       </div>
+      
 </div>

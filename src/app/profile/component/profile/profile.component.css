@@ -1,18 +1,15 @@
-.name{
+.head{
     font-size: 20px;
-    color: #016635;
+    color: rgba(1, 102, 53, 1);
 }
-.vari{
-   color: #4D4D4D;
-}
-
-.info{
+.p1{
     font-size: 16px;
 }
-.spn1{
-    color: #FA610E;
-    border-right: 1px solid  #4D4D4D;
+.p2{
+    color: rgba(250, 97, 14, 1) !important;
+    text-decoration: none;
 }
-.spn2{
-    color: #016635;
+.p3{
+   color: rgba(1, 102, 53, 1); 
+   text-decoration: none;
 }

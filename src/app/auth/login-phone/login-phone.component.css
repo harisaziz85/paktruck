@@ -42,8 +42,8 @@ input{
     font-size: 32px;
 }
 ::placeholder{
-    font-size: 24px;
-    font-size: bold;
+    font-size: 16px;
+    font-weight: 500;
 }
 .roleclr{
     color: #016635;
@@ -88,15 +88,15 @@ input{
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  padding: 5px 0px;
+  padding: 0px 0px;
   width: 200px; /* Adjust width as needed */
 }
 
 .country-code {
-  font-size: 20px;
+  font-size: 16px;
   color: #666;
   margin-right: 5px;
-  margin-bottom:-20px ;
+  margin-bottom:-29px !important ;
   border-right: 2px solid grey;
  
 }
@@ -105,8 +105,8 @@ input{
   border: none;
   outline: none;
   flex: 1;
-  font-size: 20px;
-  padding: 0;
+  font-size: 16px;
+
   color: #666;
 
 }

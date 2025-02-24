@@ -1,0 +1,48 @@
+<div class="container mt-4">
+    <h3>Total Ads</h3>
+    <div class="btn-group mb-3">
+      <button class="btn btn-success">All Ads</button>
+      <button class="btn btn-outline-secondary">Feature Used Trucks</button>
+      <button class="btn btn-outline-secondary">All Used Buses</button>
+      <button class="btn btn-outline-secondary">All Spare Parts</button>
+    </div>
+  
+    <div class="row">
+      <div class="col-12" *ngFor="let ad of ads">
+        <div class="card mb-3 shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="ad.image" class="img-fluid rounded-start" alt="Ad Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ ad.title }}</h5>
+                <p class="text-success fw-bold">{{ ad.price }}</p>
+                <p class="card-text">
+                  <span>📍 {{ ad.location }} </span> &bull;
+                  <span>{{ ad.year }}</span> &bull;
+                  <span>{{ ad.km }} km</span> &bull;
+                  <span>{{ ad.fuel }}</span> &bull;
+                  <span>{{ ad.transmission }}</span>
+                </p>
+                <p class="text-muted small">Update {{ ad.updated }}</p>
+                <a href="#" class="btn btn-warning">View Ad</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <nav>
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a class="page-link">Total 1200</a></li>
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+  

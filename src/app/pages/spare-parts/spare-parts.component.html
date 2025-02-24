@@ -1,76 +1,245 @@
-<div class="container-fluid  py-4 ">
-  <p class="mb-4 px-5 poppins-medium head">Truck and Machinery Used Parts</p>
+<div class="main  ">
+  <div class="row py-4">
+  <div class="col-6">
+    <p class="head poppins-medium">Truck and Machinary Used Parts</p>
+    <p class="txt poppins-medium ">Buy your Truck Body Parts in the inventory of Verified PakTruck</p>
+  </div>
+  <div class="col-6"></div>
+</div></div>
+<!-- <ul class=" d-flex main pb-0 mb-0">
+  <li class="nav-item  " *ngFor="let item of menuItems">
+    <a class="nav-link poppins-bold my-3" href="javascript:void(0)" (click)="scrollToSection(item.section)">
+      {{ item.label }}
+    </a>
+  </li>
+</ul> -->
 
   <!-- Body Parts Section -->
-  <div class="main px-5 py-3">
-    <p class="poppins-medium head">Body Parts</p>
-    <p class="poppins-medium txt">Buy your Truck Body Parts in the Inventory of Verified PakTruck</p>
+  <div class="main px-5 py-3" id="bodyparts">
+    <p class="poppins-medium head1">Body Parts</p>
     <div class="row">
-      <div class="col-md-3 mb-4" *ngFor="let item of bodyParts">
-        <div class="card h-100">
-          <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
-          <div class="card-body">
-            <p class="card-title poppins-medium txt">{{ item.name }}</p>
-            <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+      <div *ngIf="loadingSpareParts" class="loading">Loading spare parts ads...</div>
+      <div *ngIf="errorMessageSpareParts" class="error">{{ errorMessageSpareParts }}</div>
+      <div class="col-md-3 mb-4" *ngFor="let ad of sparePartsAds">
+        <a [routerLink]="['/detail-page', ad._id]">
+          <div class="card h-100">
+            <img *ngIf="ad.images.length > 0" [src]="ad.images[0]" class="img1">
+            <div class="card-body">
+              <p class="card-title poppins-medium txt">{{ ad.category}}</p>
+              <p class="card-text poppins-medium txt1">{{ ad.price }}</p>
+            </div>
           </div>
-        </div>
+        </a>
+        <ng-template #noAds>
+          <p>No buses available.</p>
+      </ng-template>
       </div>
     </div>
   </div>
   <div>
-    <div class="px-5 py-4 my-5 main">
-      <p class="head poppins-medium">Cabin</p>
+    <div class="px-5 py-4 main" id="hydraulicpump">
+      <p class="head1 poppins-medium">Hydraulic Pump</p>
       <div class="row">
-        <div class="col-md-3 mb-4" *ngFor="let item of cabinParts">
-          <div class="card h-100">
-            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
-            <div class="card-body">
-              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
-              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+        <div *ngIf="loading" class="loading">Loading hydraulic pumps...</div>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    
+        <div class="col-md-3 mb-4" *ngFor="let pump of hydraulicpump">
+          <a [routerLink]="">
+            <div class="card h-100">
+              <img *ngIf="pump.image" [src]="pump.image" class="img1" alt="{{ pump.name }}">
+              <div class="card-body">
+                <p class="card-title poppins-medium txt">{{ pump.name }}</p>
+                <p class="card-text poppins-medium txt1">{{ pump.price }}</p>
+              </div>
             </div>
-          </div>
+          </a>
+        </div>
+    
+        <ng-template #noData>
+          <p>No hydraulic pumps available.</p>
+        </ng-template>
+      </div>
+    </div>
+    <div class="main px-5 py-3" id="tire">
+      <p class="poppins-medium head1">Tire</p>
+      <div class="row">
+        <div *ngIf="loadingTire" class="loading">Loading tire ads...</div>
+        <div *ngIf="errorMessageTire" class="error text-danger">{{ errorMessageTire }}</div>
+
+        <div class="col-md-3 mb-4" *ngFor="let ad of tireAds">
+          <a [routerLink]="['/detail-page', ad._id]">
+            <div class="card h-100">
+              <img *ngIf="ad.image.length > 0" [src]="ad.image[0]" class="img1">
+              <div class="card-body">
+                <p class="card-title poppins-medium txt">{{ ad.category }}</p>
+                <p class="card-text poppins-medium txt1">{{ ad.price }}</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-    <div class="px-5 py-4 my-5 main">
-      <p class="head poppins-medium">Chassis</p>
-      <div class="row">
-        <div class="col-md-3 mb-4" *ngFor="let item of chassis">
-          <div class="card h-100">
-            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
-            <div class="card-body">
-              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
-              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+    
+    
+    <div>
+      
+
+      <div>
+        <div class="main px-5 py-3" id="excavatorboom">
+          <p class="poppins-medium head1">Excavator</p>
+          <div class="row">
+            <div *ngIf="loadingExcavator" class="loading">Loading excavator ads...</div>
+            <div *ngIf="errorMessageExcavator" class="error text-danger">{{ errorMessageExcavator }}</div>
+        
+            <div class="col-md-3 mb-4" *ngFor="let ad of excavatorAds">
+              <a [routerLink]="['/detail-page', ad._id]">
+                <div class="card h-100">
+                  <img *ngIf="ad.images.length > 0" [src]="ad.images" class="card-img-top" alt="{{ ad.name }}">
+                  <div class="card-body">
+                    <p class="card-title poppins-medium txt">{{ ad.category }}</p>
+                    <p class="card-text poppins-medium txt1">{{ ad.price }}</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="px-5 py-4 my-5 main">
-      <p class="head poppins-medium">Tube</p>
-      <div class="row">
-        <div class="col-md-3 mb-4" *ngFor="let item of tube">
+        
+        <div>
+          <div class="main px-5 py-3" id="leafspring">
+            <p class="poppins-medium head1">Leaf spring</p>
+            <div class="row">
+              <div class="col-md-3 mb-4" *ngFor="let item of leafspring">
+                <a routerLink="">
+                <div class="card h-100">
+                  <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+                  <div class="card-body">
+                    <p class="card-title poppins-medium txt">{{ item.name }}</p>
+                    <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+                  </div>
+                </div></a>
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            
+
+
+            <div class="px-5 py-4 main" id="cabin">
+  <p class="head1 poppins-medium">Cabin</p>
+
+  <div *ngIf="cabinAds.length > 0; else noAds">
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let item of cabinAds">
+        <a routerLink="">
           <div class="card h-100">
             <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
             <div class="card-body">
-              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
+              <h5 class="card-title poppins-medium txt">{{ item.category }}</h5>
               <p class="card-text poppins-medium txt1">{{ item.price }}</p>
             </div>
           </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error message when no ads are available -->
+  <ng-template #noAds>
+    <p class=" poppins-medium">No cabin ads available at the moment.</p>
+  </ng-template>
+</div>
+
+            
+<div class="px-5 py-4 main" id="chassis">
+  <p class="head1 poppins-medium">Chassis</p>
+
+  <div *ngIf="chassisAds.length > 0; else noChassisAds">
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let item of chassisAds">
+        <a routerLink="">
+          <div class="card h-100">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title poppins-medium txt">{{ item.category }}</h5>
+              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error message when no ads are available -->
+  <ng-template #noChassisAds>
+    <p class="poppins-medium">No chassis ads available at the moment.</p>
+  </ng-template>
+</div>
+    
+    <div class="px-5 py-4 main" id="tube">
+      <p class="head1 poppins-medium">Tube</p>
+      <div class="row">
+        <div *ngIf="loadingTrunion" class="loading">Loading tube ads...</div>
+        <div *ngIf="errorMessageTrunion" class="error">{{ errorMessageTrunion }}</div>
+        
+        <!-- If there are no ads, show message -->
+        <!-- <div *ngIf="tubeAds.length === 0 && !loadingTrunion">No tube ads available.</div> -->
+        <div *ngIf="(tubeAds?.length === 0) && !loadingTrunion">No tube ads available.</div>
+
+        <div class="col-md-3 mb-4" *ngFor="let ad of tubeAds">
+          <a [routerLink]="['/detail-page', ad._id]">
+            <div class="card h-100">
+              <img *ngIf="ad.image.length > 0" [src]="ad.image[0]" class="img1">
+              <div class="card-body">
+                <p class="card-title poppins-medium txt">{{ ad.category }}</p>
+                <p class="card-text poppins-medium txt1">{{ ad.price }}</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-    <div class="px-5 py-4 my-5 main">
-      <p class="head poppins-medium">Trunion</p>
+    
+    <div class="px-5 py-4  main" id="engine">
+      <p class="head1 poppins-medium">Engine</p>
       <div class="row">
-        <div class="col-md-6 mb-4" *ngFor="let item of trunion">
-          <div class="card h-100">
-            <img [src]="item.image" class="card-img-top1" alt="{{ item.name }}">
-            <div class="card-body">
-              <h5 class="card-title poppins-medium txt">{{ item.name }}</h5>
-              <p class="card-text poppins-medium txt1">{{ item.price }}</p>
+        <div *ngIf="loadingTrunion" class="loading">Loading trunion ads...</div>
+        <div *ngIf="errorMessageTrunion" class="error">{{ errorMessageTrunion }}</div>
+        <div class="col-md-3 mb-4" *ngFor="let ad of engineAds">
+          <a [routerLink]="['/detail-page', ad._id]">
+            <div class="card h-100">
+              <img *ngIf="ad.images.length > 0" [src]="ad.images[0]" class="img1">
+              <div class="card-body">
+                <p class="card-title poppins-medium txt">{{ ad.category}}</p>
+                <p class="card-text poppins-medium txt1">{{ ad.price }}</p>
+              </div>
             </div>
-          </div>
+          </a>
+          <ng-template #noAds>
+            <p>No trunnion ad available.</p>
+        </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4  main" id="trunnion">
+      <p class="head1 poppins-medium">Trunnion</p>
+      <div class="row">
+        <div *ngIf="loadingTrunion" class="loading">Loading trunion ads...</div>
+        <div *ngIf="errorMessageTrunion" class="error">{{ errorMessageTrunion }}</div>
+        <div class="col-md-3 mb-4" *ngFor="let ad of trunionAds">
+          <a [routerLink]="['/detail-page', ad._id]">
+            <div class="card h-100">
+              <img *ngIf="ad.images.length > 0" [src]="ad.images[0]" class="img1">
+              <div class="card-body">
+                <p class="card-title poppins-medium txt">{{ ad.category}}</p>
+                <p class="card-text poppins-medium txt1">{{ ad.price }}</p>
+              </div>
+            </div>
+          </a>
+          <ng-template #noAds>
+            <p>No trunnion ad available.</p>
+        </ng-template>
         </div>
       </div>
     </div>

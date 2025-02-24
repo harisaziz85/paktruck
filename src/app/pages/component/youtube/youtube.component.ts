@@ -23,23 +23,23 @@ export class YoutubeComponent {
       duration: '2:33',
     },
     {
-      title: 'truck',
+      title: 'truck1',
       url: 'https://www.youtube.com/embed/ghi101',
       duration: '3:21',
     },
     {
-      title: 'truck',
-      url: 'https://www.youtube.com/embed/ghi101',
+      title: 'truck2',
+      url: 'https://www.youtube.com/embed/ghi101111',
       duration: '3:21',
     },
     {
-      title: 'truck',
-      url: 'https://www.youtube.com/embed/ghi101',
+      title: 'truck3',
+      url: 'https://www.youtube.com/embed/ghi101222',
       duration: '3:21',
     },
     {
-      title: 'truck',
-      url: 'https://www.youtube.com/embed/ghi101',
+      title: 'truck3',
+      url: 'https://www.youtube.com/embed/ghi101333',
       duration: '3:21',
     },
   ];

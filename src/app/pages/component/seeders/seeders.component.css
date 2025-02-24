@@ -1,0 +1,26 @@
+.main {
+    background-color: #f5f5f5;
+}
+
+.head {
+    font-size: 54px;
+    color: #016635;
+}
+
+.cathead {
+    font-size: 32px;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #016635;
+}
+
+.card-body {
+    font-size: 20px;
+    color: #525252;
+}
+
+.card-img-top {
+    height: 230px;
+}

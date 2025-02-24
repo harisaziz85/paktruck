@@ -7,7 +7,8 @@ import { SelltruckformComponent } from './selltruckform/selltruckform.component'
 import { AddphonevarificationComponent } from './addphonevarification/addphonevarification.component';
 import { AddsuploadsccessComponent } from './addsuploadsccess/addsuploadsccess.component';
 import { AdviewComponent } from './adview/adview.component';
-
+import { VehicleAdUloadComponent } from './vehicle-ad-uload/vehicle-ad-uload.component';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import { AdviewComponent } from './adview/adview.component';
        SelltruckformComponent,
        AddphonevarificationComponent,
        AddsuploadsccessComponent,
-       AdviewComponent
+       AdviewComponent,
+       VehicleAdUloadComponent
   ],
   imports: [
     CommonModule,
     AdsuploadRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdsuploadModule { }

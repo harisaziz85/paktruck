@@ -1,0 +1,231 @@
+<div class="container mt-4">
+  <h2 class="text-success">Sell Used Truck in Pakistan</h2>
+  <p>
+    Do you want to sell your Truck or gari online? Place your Truck free ad and sell Truck in 1 step
+    in any city of Pakistan including Karachi, Lahore, Islamabad, Faisalabad, Gujranwala, Rawalpindi, etc.
+  </p>
+
+  <h4 class="mt-4 text-success">Selling Truck Sale Information</h4>
+  <p>(All fields marked with * are mandatory)</p>
+
+  <form [formGroup]="createAdForm" (ngSubmit)="onSubmit()" class="p-3 border rounded bg-light">
+    <div class="row">
+      <!-- Title -->
+      <!-- <div class="col-md-6 mb-3">
+        <label>Title *</label>
+        <input type="text" class="form-control" formControlName="title" placeholder="Enter title">
+      </div> -->
+
+      <!-- City -->
+      <div class="row mb-3">
+        <div class="col-3">
+        <label class="txt3 poppins-medium">City *</label>
+        </div>
+        <div class="col-9">
+        <input type="text" class="form-control" formControlName="location" placeholder="Enter City by location">
+      </div>
+      </div>
+
+      <!-- Province Dropdown
+      <div class="col-md-6 mb-3">
+        <label>Province *</label>
+        <select class="form-control" formControlName="province">
+          <option value="" disabled>Select Province</option>
+          <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+        </select>
+      </div> -->
+
+      <!-- Category Dropdown -->
+      <!-- Category Dropdown -->
+      <!-- Category Dropdown -->
+<!-- Category Dropdown -->
+<div class="row mb-3">
+  <div class="col-3">
+    <label class="txt3 poppins -medium">Category *</label>
+  </div>
+  <div class="col-9">
+    <select class="form-control" formControlName="category" (change)="onCategoryChange($event)">
+
+    <option value="" disabled>Choose Truck Category</option>
+    <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+  </select>
+  </div>
+  
+</div>
+
+<!-- Subcategory Dropdown (Will show only if category is selected) -->
+<div class="row mb-3" *ngIf="subcategories.length > 0">
+  <div class="col-3">
+  <label class="txt3 poppins -medium">Subcategory *</label>
+
+  </div>
+  <div class="col-9">
+    <select class="form-control" formControlName="subCategory">
+      <option value="" disabled>Select Subcategory</option>
+      <option *ngFor="let sub of subcategories" [value]="sub">{{ sub }}</option>
+    </select>
+  </div>
+  
+</div>
+
+
+
+
+      <!-- Registered Status -->
+      <div class="row mb-3">
+        <div class="col-3">
+          <label class="txt3 poppins-medium">Registered In *</label>
+
+        </div>
+        <div class="col-9">
+        <input type="text" class="form-control" formControlName="registeredIn" placeholder="Registered In">
+
+        </div>
+      </div>
+
+      <!-- Truck Info -->
+      <!-- <div class="col-md-6 mb-3">
+        <label>Truck Info *</label>
+        <input type="text" class="form-control" formControlName="truckInfo" placeholder="Make by Year / Model">
+      </div> -->
+
+
+
+      <div class="row mb-3">
+        <div class="col-3">
+          <label class="txt3 poppins-medium">Local Or Imported *</label>
+        </div>
+        <div class="col-9">
+          <select class="form-control" formControlName="localOrImported">
+            <option value="" disabled selected>Select Option</option>
+            <option *ngFor="let option of localOrImportedOptions" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+      </div>
+      
+
+      <div class="row mb-3">
+        <div class="col-3">
+        <label class="txt3 poppins-medium">Brand*</label>
+
+        </div>
+        <div class="col-9">
+        <input type="text" class="form-control" formControlName="make" placeholder="Enter Brand Name">
+
+        </div>
+      </div>
+
+      <!-- Engine Type -->
+      <div class="row mb-3">
+        <div class="col-3">
+        <label class="txt3 poppins-medium">Engine Type *</label>
+
+        </div>
+        <div class="col-9">
+          <select class="form-control" formControlName="engineType">
+            <option value="" disabled>Select Engine Type</option>
+            <option *ngFor="let type of engineTypes" [value]="type">{{ type }}</option>
+          </select>
+        </div>
+        
+      </div>
+
+      <!-- Assembly -->
+      <!-- <div class="col-md-6 mb-3">
+        <label>Assembly *</label>
+        <select class="form-control" formControlName="assembly">
+          <option value="" disabled>Select Assembly</option>
+          <option *ngFor="let asm of assemblies" [value]="asm">{{ asm }}</option>
+        </select>
+      </div> -->
+
+      <!-- Engine Capacity -->
+      <!-- <div class="col-md-6 mb-3">
+        <label>Engine Capacity (CC) *</label>
+        <select class="form-control" formControlName="engineCapacity">
+          <option value="" disabled>Select Engine Capacity</option>
+          <option *ngFor="let cap of engineCapacities" [value]="cap">{{ cap }}</option>
+        </select>
+      </div> -->
+
+      <!-- Price -->
+      <div class="row mb-3">
+        <div class="col-3">
+          <label class="txt3 poppins-medium">Price (Rs.) *</label>
+        </div>
+        <div class="col-9">
+          <input 
+            type="number" 
+            class="form-control" 
+            formControlName="price" 
+            placeholder="Enter Price"
+            min="0"
+          >
+         
+        </div>
+      </div>
+      
+
+      <!-- Description -->
+      <div class="row mb-3">
+        <div class="col-3">
+        <label class="txt3 poppins-medium">Add Description</label>
+        </div>
+        <div class="col-9">
+          <textarea class="form-control" formControlName="description" rows="4"
+          placeholder="Describe your truck"></textarea>
+        </div>
+        
+      </div>
+    </div>
+
+    <h4 class="mt-4 text-muted">Truck Details</h4>
+    <div class="row">
+      <!-- Truck Year -->
+      <div class="row mb-3">
+        <div class="col-3">
+        <label class="txt3 poppins-medium">Enter Truck Year *</label>
+        </div>
+        <div class="col-9">
+          <select class="form-control" formControlName="modelYear">
+            <option value="" disabled>Select Year</option>
+            <option *ngFor="let year of truckYears" [value]="year">{{ year }}</option>
+          </select>
+        </div>
+       
+      </div>
+      <div>
+        <label for="">Upload image</label>
+        <input id="images" type="file" class="form-control" (change)="onFileChange($event)" multiple />
+      </div>
+      
+
+      <!-- Image Preview -->
+      <div class="row mt-3">
+        <div *ngFor="let img of selectedFilesPreview; let i = index" class="col-md-3">
+          <img [src]="img" class="img-thumbnail" alt="Selected Image" />
+          <button type="button" class="btn btn-danger btn-sm mt-1" (click)="removeImage(i)">Remove</button>
+        </div>
+      </div>
+
+      <!-- Truck Km -->
+      <!-- <div class="col-md-6 mb-3">
+        <label>Enter Truck Km *</label>
+        <select class="form-control" formControlName="truckKm">
+          <option value="" disabled>Select Km</option>
+          <option *ngFor="let km of truckKmOptions" [value]="km">{{ km }}</option>
+        </select>
+      </div> -->
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-end mt-4">
+      <button type="button" class="btn btn-secondary poppins-medium txt">Cancel</button>
+      <!-- <button type="submit" class="btn btn-success">Save</button> -->
+      <button type="submit" class="btn btn-success poppins-medium txt ms-3" [disabled]="isSubmitting">
+        {{ isSubmitting ? 'Submitting...' : 'Post Ad' }}
+      </button>
+      
+    </div>
+  </form>
+</div>

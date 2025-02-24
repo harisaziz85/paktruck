@@ -5,6 +5,7 @@ import { SelltruckformComponent } from './selltruckform/selltruckform.component'
 import { AddphonevarificationComponent } from './addphonevarification/addphonevarification.component';
 import { AddsuploadsccessComponent } from './addsuploadsccess/addsuploadsccess.component';
 import { AdviewComponent } from './adview/adview.component';
+import { VehicleAdUloadComponent } from './vehicle-ad-uload/vehicle-ad-uload.component';
 
 const routes: Routes = [
   {path:'spare-parts-upload', component:SparepartsuploadComponent},
@@ -12,6 +13,11 @@ const routes: Routes = [
   {path:'phone-varification', component:AddphonevarificationComponent},
   {path:'upload-success', component:AddsuploadsccessComponent},
   {path:'view-ad', component:AdviewComponent},
+  {path:'vehicle-ad-upload', component:VehicleAdUloadComponent},
+
+  
+  
+  
 
 
 

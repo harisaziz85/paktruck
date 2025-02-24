@@ -9,6 +9,7 @@ import { MobileVarificationComponent } from './mobile-varification/mobile-varifi
 import { ForgetCodeVarificationComponent } from './forget-code-varification/forget-code-varification.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
 import { ShopindividualvarificationComponent } from './shopindividualvarification/shopindividualvarification.component';
+import { IndividualVarificatiionComponent } from './individual-varificatiion/individual-varificatiion.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -18,7 +19,9 @@ const routes: Routes = [
   {path:'mobile-code-varification',component:MobileVarificationComponent},
   {path:'forget-password-varification',component:ForgetCodeVarificationComponent},
   {path:"new-password" ,component:NewpasswordComponent},
-  {path:"varification" ,component:ShopindividualvarificationComponent},
+  {path:"shop-varification" ,component:ShopindividualvarificationComponent},
+  {path:"individual-varification" ,component:IndividualVarificatiionComponent},
+
 
 
 

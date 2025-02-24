@@ -1,20 +1,23 @@
 <div class=" manage ">
-    <div class="d-flex py-3 px-2 justify-content-between px-4 ">
+    <div class="d-flex justify-content-between  ">
         <p class="head poppins-medium">Featured Used Buses for Sale</p>
-        <p class="text-success poppins-medium txt">View all featured used Buses</p>
+        <p class="poppins-medium "><a routerLink="/filterpage" class="txt text-success text-decoration-none">View all featured used Buses</a></p>
     </div>
     
     
-    <div class="row px-4">
+    <div class="row ">
         <div class="col-md-3 mb-4" *ngFor="let item of  FeaturedUsedBuses">
+          <a routerLink="detail-page">
           <div class="card h-100 ">
             <div class="fea poppins-regular p-2"  style="height: 50px; width: 50%;">Featured</div>
             <img [src]="item.image" class="card-img-top" alt="{{ item.name }}">
             <div class="card-body">
-              <h5 class="card-title">{{ item.name }}</h5>
-              <p class="card-text">{{ item.price }}</p>
+              <p class="card-title text-muted poppins-medium">{{ item.name }}</p>
+              <p class="card-text poppins-semibold">{{ item.price }}</p>
+              <p class="card-text1 poppins-regular">{{ item.city }}</p>
+
             </div>
-          </div>
+          </div></a>
         </div>
       </div>
 </div>

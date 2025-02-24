@@ -1,5 +1,6 @@
 .main{
   background-color: #E9EEEB;
+  padding: 50px 64px;
 }
 .card {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -8,20 +9,24 @@
   .card img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 110px;
   }
   .nav-tabs{
     border: 0px !important;
   }
   .nav-link{
-    font-size: 32px;
+    font-size: 24px;
     background-color: rgba(0, 255, 255, 0);
-    color: grey ;
+    margin-left: -13px;
+    color: rgba(0, 0, 0, 0.7) ;
   }
   .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
-    font-size: 32px;
+    font-size: 24px;
     background-color: rgba(0, 255, 255, 0) !important;
     border: 0px !important;
     color: #016635;
+    text-decoration: underline;
+    text-underline-offset: 10px;
   }
   .custom-col {
     flex: 0 0 20%;
@@ -31,7 +36,7 @@
     font-size: 16px;
   }
   .card-text{
-    font-size: 12px;
+    font-size: 16px;
   }
   .head{
     font-size: 32px;

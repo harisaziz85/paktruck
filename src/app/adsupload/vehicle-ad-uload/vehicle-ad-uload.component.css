@@ -1,0 +1,31 @@
+.imgsetting{
+    height: 200px;
+    margin-top: -40px;
+    
+    }
+    .head{
+        color: #016635;
+        font-size: 32px;
+    }
+    .txt{
+        font-size: 20px;
+    }
+    input{
+        height: 60px;
+    }
+    .txt3{
+        font-size: 24px;
+    }
+    select{
+        height: 60px;
+    }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

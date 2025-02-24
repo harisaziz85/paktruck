@@ -1,38 +1,47 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
-    <div class="container-fluid px-5">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="images/truck.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
-      
-      </a>
-      <!-- Toggle Button for Mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Navbar Items -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link poppins-medium mx-2" aria-current="page" routerLink="/pages/homepage">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link poppins-medium mx-2" routerLink="/pages/used-trucks">Used Truck</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link poppins-medium mx-2" routerLink="/pages/spare-parts">Spare Parts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link poppins-medium mx-2" routerLink="/pages/all-blogs">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link poppins-medium mx-2" routerLink="/pages/videos">Video</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link poppins-medium mx-2" routerLink="/pages/contact-us">Contact us</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" routerLink="">
+      <img src="images/truck.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link poppins-medium mx-2" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link poppins-medium mx-2" routerLink="/used-trucks" routerLinkActive="active">Used Truck</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link poppins-medium mx-2" routerLink="/spare-parts" routerLinkActive="active">Spare Parts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link poppins-medium mx-2" routerLink="/all-blogs" routerLinkActive="active">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link poppins-medium mx-2" routerLink="/videos" routerLinkActive="active">Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link poppins-medium mx-2" routerLink="/contact-us" routerLinkActive="active">Contact us</a>
+        </li>
+        <li class="nav-item dropdown ms-2">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" (click)="toggleDropdown('dropdown1')">
+              Post an Ad
+            </button>
+            <div class="dropdown-menu" [class.show]="dropdownState['dropdown1']">
+              <a *ngFor="let item of dropdown1" class="dropdown-item" [routerLink]="item.link">
+                {{ item.name }}
+              </a>
+            </div>
+          </div>
+        </li>
+        
+        
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>

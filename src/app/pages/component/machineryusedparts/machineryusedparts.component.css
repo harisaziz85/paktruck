@@ -11,11 +11,27 @@
     margin-bottom: 20px;
     font-size: 20px;
   }
+  .manage{
+    padding-top: 44px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 44px;
+  }
   .head{
-    font-size: 32px;
-  }
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   .txt{
-    font-size: 16px;
-    background-color: #00000042;
-    padding: 13px 15px;
-  }
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+  
+    }
+    .clr{
+      color: rgba(0, 0, 0, 0.7);
+    }
+    a{
+      color: black;
+    }

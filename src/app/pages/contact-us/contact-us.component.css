@@ -23,7 +23,7 @@ input{
     font-size: 20px;
 }  
 span{
-    color: #FA610E;
+    color: rgba(1, 102, 53, 1);
     font-size: 24px;
 }
 .txt{
@@ -34,7 +34,7 @@ span{
 }
 .link{
     font-size: 20px;
-    color: #FA610E;
+    color:rgba(1, 102, 53, 1)
 }
 .txt1{
     font-size: 20px;

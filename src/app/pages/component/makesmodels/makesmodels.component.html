@@ -9,10 +9,11 @@
         <img [src]="column.image" alt="Brand image" class="img-fluid mb-2">
           <h4 class="poppins-medium">{{ column.heading }}</h4>
         </div>
-        
-        <div *ngFor="let item of column.cities" class="poppins-medium">
+        <div *ngFor="let item of column.cities" class="poppins-medium list-item">
+        <a routerLink="/filterpage">
+
           <span class="dot"></span>
-          {{ item }}
+          {{ item }}</a>
         </div>
       </div>
     </div>
@@ -21,27 +22,36 @@
 <div class="row">
     <p class="poppins-medium head">Used Truck by City</p>
 <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckbyCity">
-    <div class="list-item poppins-medium" *ngFor="let item of column" >
+
+
+    <div class="list-item poppins-medium " *ngFor="let item of column" >
+      <a routerLink="/filterpage">
       <span class="dot"></span>
-      {{ item }}
+      {{ item }}</a>
     </div>
   </div>
 </div>
 <div class="row">
     <p class="poppins-medium head">Used Truck by Budget</p>
 <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckbyBudget">
-    <div class="list-item poppins-medium" *ngFor="let item of column" >
+  
+    <div class="list-item poppins-medium " *ngFor="let item of column" >
+  <a routerLink="/filterpage">
+
       <span class=""></span>
-      {{ item }}
+      {{ item }}</a>
     </div>
   </div>
 </div>
 <div class="row">
     <p class="poppins-medium head">Used Truck by Year</p>
 <div class="col-md-3 mb-4" *ngFor="let column of UsedTruckByYear ">
-    <div class="list-item poppins-medium" *ngFor="let item of column" >
+
+    <div class="list-item poppins-medium " *ngFor="let item of column" >
+  <a routerLink="/filterpage">
+
       <span class=""></span>
-      {{ item }}
+      {{ item }}</a>
     </div>
   </div>
 </div>

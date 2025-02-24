@@ -2,6 +2,7 @@
     <p class="head poppins-medium">Tips & Advice</p>
     <div class="row ">
         <div class="col-md-3 mb-4" *ngFor="let item of  tipsandadivce">
+          <a routerLink="/blog-detail-page" class="text-decoration-none">
           <div class="card h-100 ">
             <div class="cradhead">
             <img [src]="item.image" class="card-img-top" alt="{{ item.title }}">
@@ -10,7 +11,7 @@
               <h5 class="card-title advicehead poppins-medium">{{ item.title}}</h5>
               <p class="card-text text-muted poppins-medium txt">{{ item.name }} <span>•{{item.date}}</span></p>
             </div>
-          </div>
+          </div></a>
         </div>
       </div>
 </div>

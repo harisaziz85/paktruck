@@ -10,10 +10,13 @@
   .list-item {
     margin-bottom: 20px; 
     line-height: 30px;
+    color: rgba(0, 0, 0, 0.7) !important;
   }
   .head{
     font-size: 32px;
     color: #016635;
+    padding-top:64px ;
+    padding-bottom: 24px;
   }
   .head1{
     font-size: 32px;
@@ -23,4 +26,8 @@
   }
   .txt{
     font-size: 20px;
+    line-height: 50px !important;
+  }
+  .main1{
+    padding: 64px 44px 44px 44px;
   }

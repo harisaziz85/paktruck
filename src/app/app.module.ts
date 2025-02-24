@@ -10,6 +10,13 @@ import { NewsletterComponent } from './common/newsletter/newsletter.component';
 import { FormsModule } from '@angular/forms';
 import { ShopsindividualpopupComponent } from './common/shopsindividualpopup/shopsindividualpopup.component';
 import { TopbarComponent } from './common/topbar/topbar.component';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './core/helpers/jwt.interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AllshopsComponent } from './allshops/allshops.component';
+// import { SparepartsdetailsComponent } from './sparepartsdetails/sparepartsdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,15 +25,24 @@ import { TopbarComponent } from './common/topbar/topbar.component';
     AppDownloadComponent,
     NewsletterComponent,
     ShopsindividualpopupComponent,
-    TopbarComponent
+    TopbarComponent,
+    AllshopsComponent,
+    // SparepartsdetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot() 
+    
+
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     provideClientHydration()
   ],
   bootstrap: [AppComponent]

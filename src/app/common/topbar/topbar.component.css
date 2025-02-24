@@ -13,3 +13,19 @@ select option:hover {
     background-color: green;
     color: white; /* Optional for better contrast */
 }
+.dropdown{
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px !important;
+}
+.dropdown-toggle{
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px !important;
+
+}
+ul li a:hover{
+background-color: #016635 !important;
+color: white;
+}
+.logout{
+    cursor: pointer;
+}

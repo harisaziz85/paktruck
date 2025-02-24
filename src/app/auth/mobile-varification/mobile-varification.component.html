@@ -1,58 +1,48 @@
 <div class="contaier-fluid main overflow-hidden">
-    <div class="row">
-        <div class="col-md-5 py-5 px-5">
-            <p class="head poppins-semibold text-white pb-5">Getting <br>
-                Start PakTrucks World</p>
-                <img src="images/truck.png" class="img-fluid mt-5" alt="">
-        </div>
-        <div class="col-md-7 formcol">
-  <div class="text-end">
-    <Select class="poppins-medium">
-        <option value="">English (UK)</option>
-        <option value="">Urdu</option>
-  
-    </Select>
-  </div>
-  <div class=" bg-white d-flex align-items-center justify-content-center">
-    <div class="verification-box ">
-      <p class="poppins-bold formhead">Mobile Verification</p>
-      <p class="poppins-regular txt1">Verification code sent to your email</p>
+  <div class="row">
+    <div class="col-md-5 py-5 px-5">
+      <p class="head poppins-semibold text-white pb-5">Getting <br>
+        Start PakTrucks World</p>
+      <img src="images/truck.png" class="img-fluid mt-5" alt="">
+    </div>
+    <div class="col-md-7 formcol">
+      <div class="text-end">
+        <Select class="poppins-medium">
+          <option value="">English (UK)</option>
+          <option value="">Urdu</option>
 
-      <!-- Input Boxes -->
-      <div class="d-flex gap-3 mb-4">
-        <input type="text" class="form-control code-input" maxlength="1" />
-        <input type="text" class="form-control code-input" maxlength="1" />
-        <input type="text" class="form-control code-input" maxlength="1" />
-        <input type="text" class="form-control code-input" maxlength="1" />
-        <input type="text" class="form-control code-input" maxlength="1" />
-        <input type="text" class="form-control code-input" maxlength="1" />
+        </Select>
       </div>
+      <div class=" bg-white d-flex align-items-center justify-content-center">
+        <div class="verification-box ">
+          <p class="poppins-bold formhead">Mobile Verification</p>
+          <p class="poppins-regular txt1">Verification code sent to your email</p>
 
-      <!-- Submit Button -->
-      <button class="btn btn-success w-100 poppins-medium">Submit</button>
+          <form [formGroup]="otpForm" (ngSubmit)="submitOTP()">
+            <div class="d-flex gap-3 mb-4">
+              <input type="text" class="form-control code-input" maxlength="1" formControlName="otp1" />
+              <input type="text" class="form-control code-input" maxlength="1" formControlName="otp2" />
+              <input type="text" class="form-control code-input" maxlength="1" formControlName="otp3" />
+              <input type="text" class="form-control code-input" maxlength="1" formControlName="otp4" />
+              <input type="text" class="form-control code-input" maxlength="1" formControlName="otp5" />
+              <input type="text" class="form-control code-input" maxlength="1" formControlName="otp6" />
+            </div>
 
-      <!-- Timer and Resend Code -->
-      <div class="mt-3 d-flex justify-content-end text-end">
-        <input type="text" class="form-control code-input1" value="00" maxlength="2"  /><span class="fw-bold fs-4">:</span>
-        <input type="text" class="form-control code-input1" value="26" maxlength="2" />
-        
-        <a href="#" class="text-success poppins-regular fs-5 mt-1 ms-2 text-decoration-none">Resend Code</a>
+            <button type="submit" class="btn btn-success w-100 poppins-medium"
+              [disabled]="otpForm.invalid">Submit</button>
+          </form>
+
+
+          <!-- Timer and Resend Code -->
+          <div class="mt-3 d-flex justify-content-end text-end">
+            <input type="text" class="form-control code-input1" value="00" maxlength="2" /><span
+              class="fw-bold fs-4">:</span>
+            <input type="text" class="form-control code-input1" value="26" maxlength="2" />
+
+            <a href="#" class="text-success poppins-regular fs-5 mt-1 ms-2 text-decoration-none">Resend Code</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-        </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-     
-
-  
+</div>

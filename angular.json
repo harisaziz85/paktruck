@@ -39,8 +39,9 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -58,13 +59,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "15MB",
+                  "maximumError": "15MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "15MB",
+                  "maximumError": "15MB"
                 }
               ],
               "outputHashing": "all"
@@ -117,5 +118,6 @@
   },
   "cli": {
     "analytics": false
-  }
+  },
+  "timeout": 60000
 }

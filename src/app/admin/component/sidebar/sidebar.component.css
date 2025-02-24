@@ -1,0 +1,16 @@
+.main{
+    background-color: rgba(243, 242, 247, 1);
+}
+ul li{
+    background-color: rgba(0, 176, 116, 0.15);
+    font-size: 18px;
+    list-style: none;
+    width: 250px;
+    border-radius: 8px;
+    height: 54px;
+    margin-top: 25px;
+
+}
+i{
+    font-size: 20;
+}

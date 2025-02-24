@@ -3,37 +3,46 @@
         <div class="col-md-5 py-5 px-5">
             <p class="head poppins-semibold text-white pb-5">Getting <br>
                 Start PakTrucks World</p>
-                <img src="images/truck.png" class="img-fluid mt-5" alt="">
+            <img src="images/truck.png" class="img-fluid mt-5" alt="">
         </div>
         <div class="col-md-7 formcol">
-<div class="text-end">
-    <Select class="poppins-medium">
-        <option value="">English (UK)</option>
-        <option value="">URDU</option>
+            <div class="text-end">
+                <Select class="poppins-medium">
+                    <option value="">English (UK)</option>
+                    <option value="">URDU</option>
 
-    </Select>
-</div>
-<div>
-    <p class="mt-5 headform poppins-bold">Forgot Password</p>
-    <p class="txt2 poppins-regular">Enter your email to reset your Password</p>
-    <form>
-        
-        <div class="form-group">
-            <input type="email" class="form-control"  placeholder="Email">
-          </div>
-         
-      
-          
-       
-        <button type="submit" class="btn   w-100 poppins-medium mt-5">Continue</button>
-      </form>
-      <div>
-        
-      
-          
-          
-      </div>
-</div>
+                </Select>
+            </div>
+            <div class="main1">
+                <p class="mt-5 headform poppins-bold">Forgot Password</p>
+                <p class="txt2 poppins-regular">Enter your email to reset your Password</p>
+                <!-- In forget-pass.component.html -->
+                <form [formGroup]="forgetPasswordForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="email" placeholder="Enter your email"
+                            required>
+                        <div *ngIf="forgetPasswordForm.controls['email'].invalid && forgetPasswordForm.controls['email'].touched"
+                            class="text-danger">
+                            Please enter a valid email.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn w-100 mt-3" [disabled]="isLoading">
+                        {{ isLoading ? 'Sending...' : 'Continue' }}
+                    </button>
+
+                    <p *ngIf="message" class="mt-2">{{ message }}</p>
+                </form>
+
+
+
+                <div>
+
+
+
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

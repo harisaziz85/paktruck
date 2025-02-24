@@ -1,0 +1,29 @@
+
+.head{
+    font-size: 32px;
+    color: rgba(1, 102, 53, 1);
+}
+ul li a{
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.text{
+    color: rgba(0, 0, 0, 0.7);
+}
+.text:hover{
+    color: rgba(1, 102, 53, 1); 
+    text-decoration: underline !important;
+    text-underline-offset: 10px;
+
+}
+a.active {
+    color: rgba(1, 102, 53, 1);
+    text-decoration: underline !important;
+    text-underline-offset: 10px;
+
+}
+
+  .wpimg{
+    border: 0px !important;
+  }

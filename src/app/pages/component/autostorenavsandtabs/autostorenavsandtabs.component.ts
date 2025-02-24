@@ -14,7 +14,13 @@ export class AutostorenavsandtabsComponent {
     { image: 'images/5show.png', title: 'Auto Store 5', location: 'Phoenix' },
     // Add more data as needed
   ];
-
+autospare=[
+  { image:'images/1show.png',title:'autospare1',loaction:'Pakistan'},
+  { image:'images/2show.png',title:'autospare2',loaction:'Landon'},
+  { image:'images/3show.png',title:'autospare3',loaction:'America'},
+  { image:'images/4show.png',title:'autospare4',loaction:'Landon'},
+  { image:'images/2show.png',title:'autospare3',loaction:'Landon'},
+];
   factories = [
     { image: 'images/1show.png', title: 'Factory 1', location: 'Berlin' },
     { image: 'images/2show.png', title: 'Factory 2', location: 'Paris' },

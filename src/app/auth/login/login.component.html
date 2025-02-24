@@ -1,43 +1,51 @@
 <div class="contaier-fluid main overflow-hidden">
-    <div class="row">
-        <div class="col-md-5 py-5 px-5">
-            <p class="head poppins-semibold text-white pb-5">Getting <br>
-                Start PakTrucks World</p>
-                <img src="images/truck.png" class="img-fluid mt-5" alt="">
-        </div>
-        <div class="col-md-7 formcol">
-<div class="text-end">
-    <Select class="poppins-medium">
-        <option value="">English (UK)</option>
-        <option value="">URDU</option>
-
-    </Select>
-</div>
-<div>
-    <p class="mt-5 headform poppins-bold">Login</p>
-    <p class="poppins-medium txt2">Create Quick Alert</p>
-    <p class="txt2 poppins-regular">Create alerts quickly and get notified when new listings become available</p>
-    <form>
-        
-        <div class="form-group">
-            <input type="email" class="form-control"  placeholder="Email">
-          </div>
-         
-          <div class="form-group">
-            <input type="password" class="form-control"  placeholder="Password">
-          </div>
-          <p class="poppins-medium mt-3">
-            <a routerLink="/auth/forget-password" class="forpass">Forget Password</a>
-          </p>
-        <button type="submit" class="btn  my- w-100 poppins-medium">Login</button>
-      </form>
-      <div>
-        
-      
-          
-          
-      </div>
-</div>
-        </div>
+  <div class="row">
+    <div class="col-md-5 py-5 px-5">
+      <p class="head poppins-semibold text-white pb-5">Getting <br>
+        Start PakTrucks World</p>
+      <img src="images/truck.png" class="img-fluid mt-5" alt="">
     </div>
+    <div class="col-md-7 formcol">
+      <div class="text-end">
+        <Select class="poppins-medium">
+          <option value="">English (UK)</option>
+          <option value="">URDU</option>
+        </Select>
+      </div>
+      <div>
+        <p class="mt-5 headform poppins-bold">Login</p>
+        <p class="poppins-medium txt2">Create Quick Alert</p>
+        <p class="txt2 poppins-regular">You can connect with thousands of buyers & Sellers and quick search</p>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <input type="email" formControlName="email" class="form-control" placeholder="Email">
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
+              Valid email is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="password" formControlName="password" class="form-control" placeholder="Password">
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
+              Password must be at least 6 characters.
+            </div>
+          </div>
+          <p class="poppins-medium mt-3 text-end">
+            <a routerLink="/auth/forget-password" class="forpass text-end">Forget Password?</a>
+          </p>
+          <button type="submit" class="btn  my- w-100 poppins-medium" [disabled]="loginForm.invalid">Login</button>
+          <p class="text-center mt-2" >Don't have account <a routerLink="/auth/signup">Register</a></p>
+
+          <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        </form>
+        <div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

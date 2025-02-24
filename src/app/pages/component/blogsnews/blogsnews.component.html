@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item" *ngFor="let tab of tabs">
+        <a 
+          class="nav-link" 
+          [class.active]="activeTab === tab.id" 
+          (click)="setActiveTab(tab.id)">
+          {{ tab.title }}
+        </a>
+      </li>
+    </ul>
+  
+    <!-- Tab Content -->
+    <div class="tab-content mt-3">
+      <div *ngFor="let tab of tabs">
+        <div *ngIf="activeTab === tab.id">
+          <div class="card mb-2" *ngFor="let item of content[tab.id]">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

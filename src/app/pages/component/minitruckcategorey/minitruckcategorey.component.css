@@ -35,4 +35,8 @@
   }
   .main{
     background-color: #E9EEEB;
+    padding: 50px 64px;
+  }
+  .card-title{
+    font-size: 15px !important;
   }
